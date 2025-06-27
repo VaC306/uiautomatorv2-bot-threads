@@ -155,16 +155,28 @@ window.addEventListener('beforeunload', function (e) {
       </div>
     </div>
 
-    <!-- Card de log de publicaciones -->
+    <!-- Logs por dispositivo -->
+    {% for udid, content in device_logs.items() %}
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <h5 class="card-title">📜 Log de publicaciones</h5>
-        <pre id="bot-log"
+        <h5 class="card-title">📜 Log {{ udid }}</h5>
+        <pre class="device-log" data-udid="{{ udid }}"
+             style="max-height: 300px; overflow-y: auto; white-space: pre-wrap;">
+          {{ content }}
+        </pre>
+      </div>
+    </div>
+    {% else %}
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">📜 Log</h5>
+        <pre class="device-log" data-udid=""
              style="max-height: 300px; overflow-y: auto; white-space: pre-wrap;">
           {{ log_content }}
         </pre>
       </div>
     </div>
+    {% endfor %}
 
     <footer class="text-center text-muted my-4">
       if you feel lost: <strong>elpursi_306_</strong> (discord)
@@ -180,12 +192,13 @@ window.addEventListener('beforeunload', function (e) {
 
   
   <!-- Polling unificado y optimizado -->
-  <script>
-    const pre           = document.getElementById('bot-log');
-    const statusText    = document.getElementById('status-text');
-    const stopBtn       = document.getElementById('stop-btn');
-    const launchBtn     = document.querySelector('form[action="{{ url_for("lanzar_bot") }}"] button');
-    const countdownBar  = document.getElementById('countdown-progress');
+    <script>
+      const logEls        = document.querySelectorAll('.device-log');
+      const logBase       = '{{ url_for("log_route", udid="") }}';
+      const statusText    = document.getElementById('status-text');
+      const stopBtn       = document.getElementById('stop-btn');
+      const launchBtn     = document.querySelector('form[action="{{ url_for("lanzar_bot") }}"] button');
+      const countdownBar  = document.getElementById('countdown-progress');
 
     let pollingId = null;
 
@@ -211,12 +224,15 @@ window.addEventListener('beforeunload', function (e) {
           countdownBar.style.width = '0%';
         }
 
-        // 3) Log (solo si el usuario está en el fondo)
-        if (pre.dataset.autoscroll === 'true') {
-          const { log } = await fetch('{{ url_for("log_route") }}').then(r => r.json());
-          pre.innerText = log;
-          pre.scrollTop = pre.scrollHeight;
-        }
+          // 3) Logs por dispositivo
+          for (const pre of logEls) {
+            if (pre.dataset.autoscroll === 'true') {
+              const udid = pre.dataset.udid;
+              const { log } = await fetch(logBase + encodeURIComponent(udid)).then(r => r.json());
+              pre.innerText = log;
+              pre.scrollTop = pre.scrollHeight;
+            }
+          }
       } catch (e) {
         console.error('Polling error:', e);
       }
@@ -239,11 +255,13 @@ window.addEventListener('beforeunload', function (e) {
     });
 
     // Detectar scroll manual para desactivar/autoscroll
-    pre.dataset.autoscroll = 'true';
-    pre.addEventListener('scroll', () => {
-      pre.dataset.autoscroll =
-        (pre.scrollHeight - pre.scrollTop - pre.clientHeight < 10).toString();
-    });
+      logEls.forEach(pre => {
+        pre.dataset.autoscroll = 'true';
+        pre.addEventListener('scroll', () => {
+          pre.dataset.autoscroll =
+            (pre.scrollHeight - pre.scrollTop - pre.clientHeight < 10).toString();
+        });
+      });
 
     // Arrancar al cargar
     startPolling();

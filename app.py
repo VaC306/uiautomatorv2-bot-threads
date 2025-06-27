@@ -1,4 +1,4 @@
-import sys, os, subprocess, json, signal, io
+import sys, os, subprocess, json, signal, io, glob
 from flask import Flask, render_template, request, redirect, url_for, jsonify, flash
 import threading
 import webview
@@ -40,6 +40,7 @@ PUB_PATH     = os.path.join(EXE_DIR, "public_key.pem")
 BOT_DIR         = os.path.join(BASE_PATH, "bot")
 MESSAGES_PATH   = os.path.join(BOT_DIR, "mensajes.xlsx")
 LOG_PATH        = os.path.join(BOT_DIR, "log_publicaciones.txt")
+LOG_PATH_TEMPLATE = os.path.join(BOT_DIR, "log_%s.txt")
 if getattr(sys, "frozen", False):
     ACCOUNTS_PATH = os.path.join(EXE_DIR, "accounts.json")
 else:
@@ -83,7 +84,17 @@ def index():
     # Comprueba si el bot está corriendo
     running = bot_process is not None and bot_process.poll() is None
 
-    # Carga el log de publicaciones
+    # Carga logs por dispositivo
+    device_logs = {}
+    for path in glob.glob(os.path.join(BOT_DIR, "log_*.txt")):
+        udid = os.path.splitext(os.path.basename(path))[0].split("_", 1)[1]
+        try:
+            with open(path, "r", encoding="utf-8") as lf:
+                device_logs[udid] = lf.read()
+        except FileNotFoundError:
+            device_logs[udid] = ""
+
+    # Log general (compatibilidad)
     try:
         with open(LOG_PATH, "r", encoding="utf-8") as lf:
             log_content = lf.read()
@@ -96,6 +107,7 @@ def index():
         "index.html",
         bot_running=running,
         log_content=log_content,
+        device_logs=device_logs,
         archivo_subido=archivo_subido
     )
 
@@ -277,10 +289,15 @@ def remove_account():
             flash(f"Usuario '{usuario}' eliminado", "success")
     return redirect(url_for("seleccionar_cuentas"))
 
-@app.route("/log")
-def log_route():
+@app.route("/log/")
+@app.route("/log/<udid>")
+def log_route(udid=""):
+    if udid:
+        path = LOG_PATH_TEMPLATE % udid
+    else:
+        path = LOG_PATH
     try:
-        with open(LOG_PATH, "r", encoding="utf-8") as f:
+        with open(path, "r", encoding="utf-8") as f:
             content = f.read()
     except FileNotFoundError:
         content = ""
