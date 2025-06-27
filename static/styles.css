@@ -127,6 +127,12 @@ h5.card-title,
   color: var(--text-color) !important;
 }
 
+/* Device cards: keep info text visible */
+.device-card h5.card-title,
+.device-card .action-text {
+  color: var(--text-color) !important;
+}
+
 /* Outline-secondary buttons (link o button) usan var(--text-color) */
 .btn-outline-secondary,
 a.btn-outline-secondary {
