@@ -1,0 +1,142 @@
+/* luz suave por defecto */
+:root {
+  --bg-color:        #f2f2f2;    /* menos “blanco puro” */
+  --text-color:      #212529;    /* gris muy oscuro */
+  --card-bg:         #ffffff;    /* las tarjetas siguen blancas */
+  --pre-bg:          #e9ecef;    /* fondo de <pre> */
+  --border-color:    #dee2e6;    /* líneas suaves */
+  --navbar-bg:       #0d6efd;    /* azul Bootstrap */
+  --footer-color:    #6c757d;    /* gris Bootstrap */
+  --btn-outline:     #ffffff;
+}
+
+/* tema oscuro */
+[data-theme="dark"] {
+  --bg-color:        #141414;    /* muy oscuro */
+  --text-color:      #e4e4e4;    /* casi blanco */
+  --card-bg:         #1f1f1f;    /* gris carbón */
+  --pre-bg:          #2a2a2a;    /* fondo de <pre> */
+  --border-color:    #333333;    /* líneas oscuras */
+  --navbar-bg:       #212121;    /* navbar negro suave */
+  --footer-color:    #8a8a8a;    /* gris medio */
+  --btn-outline:     #e4e4e4;
+}
+
+body {
+  background-color: var(--bg-color);
+  color:            var(--text-color);
+  font-family:      "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin:           0;
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+}
+
+.card .card-body pre,
+pre#bot-log {
+  background-color: var(--pre-bg);
+  color:            var(--text-color);
+  border:           1px solid var(--border-color);
+  padding:          0.5rem;
+  border-radius:    0.25rem;
+  overflow-y:       auto;
+}
+
+.table {
+  background-color: var(--card-bg);
+  color:            var(--text-color);
+  border:           1px solid var(--border-color);
+}
+
+.table thead th {
+  background-color: var(--navbar-bg);
+  color:            var(--btn-outline);
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-control {
+  background-color: var(--card-bg);
+  color:            var(--text-color);
+  border:           1px solid var(--border-color);
+}
+
+.alert {
+  background-color: var(--card-bg);
+  color:            var(--text-color);
+  border:           1px solid var(--border-color);
+}
+
+footer {
+  color:         var(--footer-color);
+  font-size:     0.9rem;
+  text-align:    center;
+  margin-top:    2rem;
+}
+
+.btn-outline-secondary {
+  color:           var(--btn-outline);
+  border-color:    var(--btn-outline);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--btn-outline);
+  color:            var(--bg-color);
+}
+
+.btn-outline-danger {
+  color:           var(--text-color);
+  border-color:    var(--text-color);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--text-color);
+  color:            var(--bg-color);
+}
+
+/* Progress bar más visible */
+.progress {
+  background-color: var(--border-color);
+}
+.progress-bar {
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+}
+
+
+/* ———————————————————————— */
+/* OVERRIDES PARA TODOS LOS MODOS */
+/* ———————————————————————— */
+
+/* Que los títulos de card, la marca y los labels respeten var(--text-color) */
+h5.card-title,
+.navbar-brand,
+.form-check-label {
+  color: var(--text-color) !important;
+}
+
+/* Outline-secondary buttons (link o button) usan var(--text-color) */
+.btn-outline-secondary,
+a.btn-outline-secondary {
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+}
+
+/* Hover para que contraste bien */
+.btn-outline-secondary:hover,
+a.btn-outline-secondary:hover {
+  background-color: var(--text-color) !important;
+  color: var(--bg-color) !important;
+}

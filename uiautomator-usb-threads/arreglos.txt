@@ -1,0 +1,121 @@
+Aquí tienes un repaso detallado de los puntos que, semana atrás o con un solo dispositivo, iban bien, pero al lanzar varios hilos simultáneos aparecen fallos y cierra la app:
+
+1. Recursos compartidos entre hilos
+Único LOG_PATH para todos
+
+Todos los hilos escriben en el mismo log_publicaciones.txt sin ningún tipo de lock, lo que puede corromper el fichero o intercalar líneas de forma incompleta.
+
+Único COUNTDOWN_FILE
+
+Cada hilo guarda/lee countdown.json para la barra de progreso; las escrituras concurrentes pueden generar JSON inválido o lecturas erróneas.
+
+Reinicio de ADB en main()
+
+
+subprocess.run("adb kill-server && adb start-server", shell=True)
+Esto reinicia el demonio ADB una sola vez antes de arrancar todos los hilos, pero durante el push/pull de imágenes y los comandos adb shell … de cada hilo, pueden solaparse y perder conexiones.
+
+2. Conexión y sincronización de uiautomator2
+Múltiples u2.connect_usb() concurrentes
+
+Cada hilo invoca connect_device(udid) casi a la vez; uiautomator2 levanta un servidor sobre ADB que, al superponerse, tiende a colapsar.
+
+Sin esperar a que la sesión esté realmente lista
+
+
+d.wait_timeout = timeout
+return d
+Pero luego no se hace un d.wait_idle() o d.app_wait() para asegurarse de que la app arrancó y el servidor UIA está despierto.
+
+3. Acceso inseguro a elementos UI
+En muchos puntos haces:
+
+
+sel = d(description="Profile") or d(resourceId="barcelona_tab_profile")
+b = sel.info["bounds"]
+long_press_shell( … )
+Nunca compruebas if not sel.exists: ni usas sel.wait(timeout=…). Si ese selector falla, sel.info arroja excepción y se sale del bucle.
+
+Igual ocurre con el botón Create y con wrapper.click():
+
+
+for opcion in opciones:
+    if opcion.exists:
+        sel = opcion; break
+# pero luego immediatamente:
+sel.click()
+Sin comprobar sel.wait(), sin try/except alrededor de .info o de .click().
+
+4. Lógica de cambio de cuenta
+El contador idx solo se inicializa al principio del ciclo, pero nunca se reinicia entre cuentas si hay errores.
+
+Usas if not wrapper.click(): … asumiendo que .click() devuelve True/False, pero realmente devuelve None o lanza excepción.
+
+Tras un cambio fallido, haces d.press("back") y sigues, pero es fácil terminar en un estado distinto al esperado.
+
+5. Desplazamientos (swipe) e interacciones demasiado agresivas
+Haces un d.swipe(… ) antes de perfil y antes de Create, sin asegurar la posición inicial de la barra de navegación. Podría ocultar botones, cambiar layout o incluso cerrar la app en dispositivos más lentos.
+
+No existe unificacíon de “aseguro que estoy en la pestaña Perfil” antes de cada long-press. Podrías acabar en cualquier pantalla y el long-press sale mal.
+
+6. Manejo de excepciones demasiado amplio
+
+except Exception as e:
+    log_error("… reiniciando app …")
+    d = connect_device(udid)
+    ...
+    continue
+Aquí cazas cualquier excepción, re-creas d y vuelves a intentar sin tocar la lógica fallida. Si el problema es una UI mal detectada, nunca se corrige.
+
+7. Conflictos con ADB puro (subprocess)
+Cada clic largo usa adb shell input swipe … por separado; al hacer pushes de imagen, borrados de carpeta remota y monkey-launch desde múltiples hilos, el ADB se satura y a veces mata la app.
+
+Cambios recomendados
+Hilos independientes
+
+Un log por dispositivo: LOG_PATH = f"log_{udid}.txt".
+
+Un countdown por dispositivo: COUNTDOWN_FILE = f"countdown_{udid}.json".
+
+Conexión robusta a uiautomator2
+
+Tras d = connect_device(udid), haz:
+
+
+d.app_start("com.instagram.barcelona")
+d.wait_idle()
+No volver a llamar adb kill-server dentro de main().
+
+Compruebas existencia antes de .info / .click
+
+
+sel = d(description="Profile")
+if not sel.wait(timeout=10):
+    log_error("[…] Perfil no encontrado, saltando cuenta")
+    continue
+b = sel.info["bounds"]  # ahora es seguro
+Try/except alrededor de cada .info["bounds"] y .click()
+
+Si falla, refrescar la app (d.app_start) y volver a intentar esa misma interacción hasta N veces.
+
+Random delays y estabilización de UI
+
+Entre cada cambio de cuenta y cada botón: time.sleep(random.uniform(1.0, 2.0)).
+
+Después de cada swipe, usar d.wait_idle() o un time.sleep(1) fijo.
+
+Corregir wrapper.click()
+
+Simplemente wrapper.click(), y luego un if not sel.wait(timeout=…): para verificar que el cambio sucedió.
+
+Refactorizar el bucle de “Create”
+
+Asegurar la barra de navegación visible una sola vez tras cambiar de cuenta.
+
+Luego for intento in … con try/except en .click() pero sin re-swipe dentro.
+
+Manejo granular de errores
+
+No envuelvas TODO el for-cuenta en un único try/except. Mejor rodea cada bloque crítico por separado.
+
+Dime qué te parece este listado y, si estás de acuerdo, preparo un patch concreto que puedas copiar/pegar para incorporar todas estas mejoras de una vez.

@@ -1,0 +1,41 @@
+{
+  "platformName": "Android",
+  "platformVersion": "13",
+  "deviceName": "ZY22JXL26Z",
+  "udid": "ZY22JXL26Z",
+  "automationName": "UiAutomator2",
+  "appPackage": "com.instagram.barcelona",
+  "appActivity": "com.instagram.barcelona.mainactivity.BarcelonaActivity",
+  "noReset": true,
+  "newCommandTimeout": 600,
+  "systemPort": 8200
+}
+
+{
+  "platformName": "Android",
+  "automationName": "UiAutomator2",
+  "deviceName": "c99f1ab6",
+  "udid": "c99f1ab6",
+  "platformVersion": "13",
+  "appPackage": "com.instagram.barcelona",
+  "appActivity": "com.instagram.barcelona.mainactivity.BarcelonaActivity",
+  "noReset": true,
+  "appium:ignoreHiddenApiPolicyError":  true,
+  "newCommandTimeout": 600
+}
+
+{
+  "platformName": "Android",
+  "automationName": "UiAutomator2",
+  "platformVersion": "9",
+  "deviceName": "c4309a057d24",
+  "udid": "c4309a057d24",
+  "appPackage": "com.instagram.barcelona",
+  "appActivity": "com.instagram.barcelona.mainactivity.BarcelonaActivity",
+  "noReset": true,
+  "ignoreHiddenApiPolicyError": true,
+  "newCommandTimeout": 600
+}
+
+
+appium -p 4723 --base-path /wd/hub
