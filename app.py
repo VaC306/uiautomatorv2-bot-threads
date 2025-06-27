@@ -1,5 +1,5 @@
 import sys, os, subprocess, json, signal, io, glob
-from flask import Flask, render_template, request, redirect, url_for, jsonify, flash
+from flask import Flask, render_template, request, redirect, url_for, jsonify, flash, send_file
 import threading
 import webview
 import hashlib
@@ -84,15 +84,20 @@ def index():
     # Comprueba si el bot está corriendo
     running = bot_process is not None and bot_process.poll() is None
 
-    # Carga logs por dispositivo
+    # Carga logs por dispositivo y extrae la última línea como acción
     device_logs = {}
+    device_statuses = {}
     for path in glob.glob(os.path.join(BOT_DIR, "log_*.txt")):
         udid = os.path.splitext(os.path.basename(path))[0].split("_", 1)[1]
         try:
             with open(path, "r", encoding="utf-8") as lf:
-                device_logs[udid] = lf.read()
+                content = lf.read()
+                device_logs[udid] = content
+                lines = [l for l in content.strip().splitlines() if l]
+                device_statuses[udid] = lines[-1] if lines else ""
         except FileNotFoundError:
             device_logs[udid] = ""
+            device_statuses[udid] = ""
 
     # Log general (compatibilidad)
     try:
@@ -108,6 +113,7 @@ def index():
         bot_running=running,
         log_content=log_content,
         device_logs=device_logs,
+        device_statuses=device_statuses,
         archivo_subido=archivo_subido
     )
 
@@ -302,6 +308,26 @@ def log_route(udid=""):
     except FileNotFoundError:
         content = ""
     return jsonify({"log": content})
+
+@app.route("/last_action/<udid>")
+def last_action(udid):
+    path = LOG_PATH_TEMPLATE % udid
+    last = ""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    last = line.strip()
+    except FileNotFoundError:
+        pass
+    return jsonify({"action": last})
+
+@app.route("/download_log/<udid>")
+def download_log(udid):
+    path = LOG_PATH_TEMPLATE % udid
+    if not os.path.exists(path):
+        return "", 404
+    return send_file(path, as_attachment=True)
 
 @app.route("/status")
 def status():
