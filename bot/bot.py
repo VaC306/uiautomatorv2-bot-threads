@@ -38,17 +38,25 @@ else:
 
 RUTA_FOTOS       = os.path.join(os.path.dirname(BASE_DIR), "media", "fotos")
 LAUNCHER_SCRIPT  = os.path.join(SCRIPT_DIR, "liberar_puerto.py")
-COUNTDOWN_FILE   = os.path.join(BASE_DIR, "countdown.json")
-LOG_PATH         = os.path.join(BASE_DIR, "log_publicaciones.txt")
-REMOTE_PHOTO_DIR = os.environ.get("THREADS_PHOTO_DIR", "Pictures/threads-bot")
 
-# Iniciar log
-with open(LOG_PATH, "w", encoding="utf-8") as f:
-    f.write("📄 Log de publicaciones\n========================\n")
+LOG_PATH_TEMPLATE       = os.path.join(BASE_DIR, "log_%s.txt")
+COUNTDOWN_FILE_TEMPLATE = os.path.join(BASE_DIR, "countdown_%s.json")
+DEFAULT_LOG_PATH        = os.path.join(BASE_DIR, "log_publicaciones.txt")
+DEFAULT_COUNTDOWN_FILE  = os.path.join(BASE_DIR, "countdown.json")
+REMOTE_PHOTO_DIR        = os.environ.get("THREADS_PHOTO_DIR", "Pictures/threads-bot")
+
+device_locks = {}
+thread_local = threading.local()
+
+def get_log_path():
+    return getattr(thread_local, "log_path", DEFAULT_LOG_PATH)
+
+def get_countdown_file():
+    return getattr(thread_local, "countdown_file", DEFAULT_COUNTDOWN_FILE)
 
 def log(msg):
     ts = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
-    with open(LOG_PATH, "a", encoding="utf-8") as f:
+    with open(get_log_path(), "a", encoding="utf-8") as f:
         f.write(f"{ts} {msg}\n")
 
 def log_info(msg):  log(f"ℹ️ INFO: {msg}")
@@ -289,13 +297,13 @@ def esperar_tiempo(segundos_totales):
         mins, secs = divmod(i, 60)
         # Guardar countdown en JSON
         try:
-            with open(COUNTDOWN_FILE, "w", encoding="utf-8") as f:
+            with open(get_countdown_file(), "w", encoding="utf-8") as f:
                 json.dump({"remaining": i, "mins": mins, "secs": secs, "total": segundos_totales}, f)
         except Exception:
             pass
         time.sleep(1)
     try:
-        os.remove(COUNTDOWN_FILE)
+        os.remove(get_countdown_file())
     except Exception:
         pass
 
@@ -539,7 +547,7 @@ def esperar_tiempo_social_humano(segundos_totales, device: u2.Device,
             remaining = fin - time.time()
             mins, secs = divmod(int(remaining), 60)
             try:
-                with open(COUNTDOWN_FILE, "w", encoding="utf-8") as f:
+                with open(get_countdown_file(), "w", encoding="utf-8") as f:
                     json.dump({
                         "remaining": int(remaining),
                         "mins": mins,
@@ -558,7 +566,7 @@ def esperar_tiempo_social_humano(segundos_totales, device: u2.Device,
     device.swipe(360, 400, 360, 1400, steps=10)
     time.sleep(1)
     try:
-        os.remove(COUNTDOWN_FILE)
+        os.remove(get_countdown_file())
     except:
         pass
 
@@ -567,6 +575,11 @@ def esperar_tiempo_social_humano(segundos_totales, device: u2.Device,
         """
 
 def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
+    thread_local.log_path = LOG_PATH_TEMPLATE % udid
+    thread_local.countdown_file = COUNTDOWN_FILE_TEMPLATE % udid
+    with open(thread_local.log_path, "w", encoding="utf-8") as f:
+        f.write("📄 Log de publicaciones\n========================\n")
+
     SOCIAL_CADA_N_CICLOS = (8, 11)
     proximo_social = random.randint(*SOCIAL_CADA_N_CICLOS)
     ciclos_completados = 0
@@ -609,44 +622,43 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
                             steps=random.randint(5, 12))
                 time.sleep(random.uniform(1.0, 2.5))
 
-                # Cambiar de cuenta
-                sel = (d(description="Profile") or
-                    d(resourceId="barcelona_tab_profile") or
-                    d(resourceId="com.instagram.barcelona:id/barcelona_tab_profile") or
-                    d(description="Perfil"))
-                
+                with device_locks[udid]:
+                    # Cambiar de cuenta
+                    sel = (d(description="Profile") or
+                        d(resourceId="barcelona_tab_profile") or
+                        d(resourceId="com.instagram.barcelona:id/barcelona_tab_profile") or
+                        d(description="Perfil"))
 
-                # 2) Long-press en el centro del selector
-                b = sel.info["bounds"]
-                x = (b["left"] + b["right"]) // 2
-                y = (b["top"]  + b["bottom"]) // 2
-                long_press_shell(udid, x, y, int(1.5*1000))
-                time.sleep(3)
-    
-    
-                # 3) Espera y click en la cuenta
-                # localizamos el contenedor completo de la fila de la cuenta
-                wrapper = d.xpath(f"//android.view.View[@clickable='true'][.//android.widget.TextView[@text='{username}']]")
-                if wrapper.wait(timeout=8):
-                    # buscamos un descendiente con content-desc "Current account"
-                    if idx==0:
-                        log_ok(f"[{udid}] Ya en '{username}', no cambio de cuenta")
-                        d.press("back")
-                        idx += 1
-                        time.sleep(1)
-                    else:
-                        if not wrapper.click():
-                            log_ok(f"[{udid}] Cambio a cuenta '{username}' correcto")
-                            time.sleep(1)
-                        else:
-                            log_error(f"[{udid}] Falla al cambiar a '{username}'")
+                    # 2) Long-press en el centro del selector
+                    b = sel.info["bounds"]
+                    x = (b["left"] + b["right"]) // 2
+                    y = (b["top"]  + b["bottom"]) // 2
+                    long_press_shell(udid, x, y, int(1.5*1000))
+                    time.sleep(3)
+
+                    # 3) Espera y click en la cuenta
+                    # localizamos el contenedor completo de la fila de la cuenta
+                    wrapper = d.xpath(f"//android.view.View[@clickable='true'][.//android.widget.TextView[@text='{username}']]")
+                    if wrapper.wait(timeout=8):
+                        # buscamos un descendiente con content-desc "Current account"
+                        if idx==0:
+                            log_ok(f"[{udid}] Ya en '{username}', no cambio de cuenta")
                             d.press("back")
                             idx += 1
-                            continue
-                else:
-                    log_error(f"[{udid}] No encontré el contenedor para '{username}'")
-                    d.press("back")
-                    continue
+                            time.sleep(1)
+                        else:
+                            if not wrapper.click():
+                                log_ok(f"[{udid}] Cambio a cuenta '{username}' correcto")
+                                time.sleep(1)
+                            else:
+                                log_error(f"[{udid}] Falla al cambiar a '{username}'")
+                                d.press("back")
+                                idx += 1
+                                continue
+                    else:
+                        log_error(f"[{udid}] No encontré el contenedor para '{username}'")
+                        d.press("back")
+                        continue
     
                 # 4) Botón Create (hasta 3 intentos)
                 success = False
@@ -872,8 +884,8 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
                 d.app_start("com.instagram.barcelona")
                 time.sleep(4)
 
-                if os.path.exists(COUNTDOWN_FILE):
-                    with open(COUNTDOWN_FILE) as f:
+                if os.path.exists(get_countdown_file()):
+                    with open(get_countdown_file()) as f:
                         data = json.load(f)
                     rem = data.get("remaining", 0)
                     if rem > 0:
@@ -883,9 +895,9 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
                                                         like_prob=0.1, max_likes_por_cuenta=4)
                         else:
                             esperar_tiempo(rem)
-                        try: 
-                            os.remove(COUNTDOWN_FILE)
-                        except: 
+                        try:
+                            os.remove(get_countdown_file())
+                        except:
                             pass
                         continue  # saltamos el repost y vamos al siguiente ciclo
             
@@ -895,8 +907,11 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
 
 def main():
     # limpiar countdown
-    if os.path.exists(COUNTDOWN_FILE):
-        os.remove(COUNTDOWN_FILE)
+    if os.path.exists(DEFAULT_COUNTDOWN_FILE):
+        os.remove(DEFAULT_COUNTDOWN_FILE)
+
+    with open(DEFAULT_LOG_PATH, "w", encoding="utf-8") as f:
+        f.write("📄 Log de publicaciones\n========================\n")
 
     subprocess.run("adb kill-server && adb start-server", shell=True)
 
@@ -946,6 +961,7 @@ def main():
 
     threads = []
     for udid in dispositivos:
+        device_locks[udid] = threading.Lock()
         grupo = cuentas_por_dispositivo.get(udid, [])
         t = threading.Thread(
             target=publicar_con_u2,
