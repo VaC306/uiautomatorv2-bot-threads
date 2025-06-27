@@ -45,6 +45,10 @@ DEFAULT_LOG_PATH        = os.path.join(BASE_DIR, "log_publicaciones.txt")
 DEFAULT_COUNTDOWN_FILE  = os.path.join(BASE_DIR, "countdown.json")
 REMOTE_PHOTO_DIR        = os.environ.get("THREADS_PHOTO_DIR", "Pictures/threads-bot")
 
+# Reemplazar caracteres problemáticos para usar el UDID como parte de un nombre de archivo
+def safe_udid(udid: str) -> str:
+    return "".join(c if c.isalnum() or c in "._-" else "_" for c in udid)
+
 device_locks = {}
 thread_local = threading.local()
 
@@ -575,8 +579,9 @@ def esperar_tiempo_social_humano(segundos_totales, device: u2.Device,
         """
 
 def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
-    thread_local.log_path = LOG_PATH_TEMPLATE % udid
-    thread_local.countdown_file = COUNTDOWN_FILE_TEMPLATE % udid
+    safe = safe_udid(udid)
+    thread_local.log_path = LOG_PATH_TEMPLATE % safe
+    thread_local.countdown_file = COUNTDOWN_FILE_TEMPLATE % safe
     with open(thread_local.log_path, "w", encoding="utf-8") as f:
         f.write("📄 Log de publicaciones\n========================\n")
 
