@@ -80,11 +80,14 @@ pre#bot-log {
   border:           1px solid var(--border-color);
 }
 
-footer {
-  color:         var(--footer-color);
-  font-size:     0.9rem;
-  text-align:    center;
-  margin-top:    2rem;
+footer a {
+  color: #66b2ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #99ccff;
 }
 
 .btn-outline-secondary {
@@ -145,4 +148,32 @@ a.btn-outline-secondary {
 a.btn-outline-secondary:hover {
   background-color: var(--text-color) !important;
   color: var(--bg-color) !important;
+}
+
+.transition-card {
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.75rem;
+}
+
+/* Colores pastel ultra suaves */
+.bg-running {
+  background-color: rgba(40, 167, 69, 0.08);
+  border-color: #28a745;
+}
+
+.bg-stopped {
+  background-color: rgba(220, 53, 69, 0.08);
+  border-color: #dc3545;
+}
+
+.device-card h5,
+.device-card small {
+  color: #f1f1f1 !important;  /* o usa tu variable de texto claro */
+}
+
+.card {
+  margin-bottom: 2rem !important;
+  border-radius: 1rem;
 }

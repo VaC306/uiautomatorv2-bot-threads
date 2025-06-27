@@ -13,18 +13,6 @@ import shutil
 import re
 import traceback
 
-# Flag para usar dispositivo real vía USB
-use_usb = False
-if "--usb" in sys.argv:
-    use_usb = True
-    sys.argv.remove("--usb")
-
-use_social = False
-if "--social" in sys.argv:
-    use_social = True
-    sys.argv.remove("--social")
-
-
 # Rutas base
 if getattr(sys, "frozen", False):
     EXE_DIR = os.path.dirname(sys.executable)
@@ -76,22 +64,24 @@ def connect_device(serial: str, timeout: float = 20.0):
     d.wait_timeout = timeout
     return d
 
-def cargar_imagenes():
-    """
-    Devuelve una lista de rutas absolutas a las imágenes dentro de media/fotos
-    """
-    fotos_dir = RUTA_FOTOS
-    if not os.path.exists(fotos_dir):
-        log("⚠️ No se encontró el directorio media/fotos, se creará vacío")
-        os.makedirs(fotos_dir, exist_ok=True)
+def obtener_dispositivos_usb(timeout=5):
+    log_info("🔌 Buscando dispositivos USB conectados…")
+    inicio = time.time()
+    while time.time() - inicio < timeout:
+        salida = subprocess.getoutput("adb devices")
+        log_info(f"📥 Salida adb devices:\n{salida}")
+        líneas = salida.splitlines()[1:]  # Ignora cabecera
 
-    extensiones_validas = (".jpg", ".jpeg", ".png", ".webp")
-    imagenes = [
-        os.path.join(fotos_dir, f)
-        for f in os.listdir(fotos_dir)
-        if f.lower().endswith(extensiones_validas)
-    ]
-    return imagenes
+        reales = [l.split()[0] for l in líneas if len(l.split()) >= 2 and l.strip().endswith("device") and not l.startswith("emulator-")]
+
+        if reales:
+            log_ok(f"✅ Dispositivos USB detectados: {reales}")
+            return reales
+
+        time.sleep(0.5)
+
+    log_warn("❌ No hay dispositivos USB detectados")
+    return []
 
 def long_press_shell(udid, x, y, duration_ms):
     # inyecta un gesto de pulsación larga usando adb shell input swipe
@@ -101,6 +91,143 @@ def long_press_shell(udid, x, y, duration_ms):
         str(x), str(y), str(x), str(y), str(duration_ms)
     ]
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+def registrar_cuentas_dispositivo_u2(d, udid):
+    log_info(f"[{udid}] ⏳ Intentando registrar cuentas…")
+
+    # Solo a–z, 0–9, _ y . (3–30 chars)
+    regex_usuario = re.compile(r"^[a-z0-9._]{3,30}$")
+
+    # 🔼 Asegurar que la barra inferior sea visible
+    d.swipe(360, 400, 360, 1400, steps=10)  # swipe hacia arriba para mostrar barra
+    time.sleep(2)
+
+    # 1. Intenta por content-desc "Profile"
+    if d(description="Profile").exists:
+        sel = d(description="Profile")
+
+    # 2. Si no, intenta por resource-id corto
+    elif d(resourceId="barcelona_tab_profile").exists:
+        sel = d(resourceId="barcelona_tab_profile")
+
+    # 3. Si no, intenta por resource-id completo
+    elif d(resourceId="com.instagram.barcelona:id/barcelona_tab_profile").exists:
+        sel = d(resourceId="com.instagram.barcelona:id/barcelona_tab_profile")
+
+    # 4. Si no, intenta por descripción en español (por si el sistema está en español)
+    elif d(description="Perfil").exists:
+        sel = d(description="Perfil")
+
+    # 4) Ahora esperamos y abortamos si no lo encontramos
+    if not sel.wait(timeout=10):
+        log_error(f"[{udid}] botón de perfil no encontrado; abortando.")
+        raise RuntimeError  # o raise RuntimeError, según tu flujo
+
+    # 5) Ya podemos hacer el long-press con seguridad
+    b = sel.info["bounds"]
+    x = (b["left"] + b["right"]) // 2
+    y = (b["top"]  + b["bottom"]) // 2
+    long_press_shell(udid, x, y, int(1.5*1000))
+    time.sleep(3)
+
+    # 3) Recolecta únicamente el primer TextView de cada bloque
+    usuarios = []
+    for bloque in d(className="android.view.View"):
+        try:
+            # .child() te devuelve el primer hijo que cumpla el selector
+            tv = bloque.child(className="android.widget.TextView")
+            txt = (tv.get_text() or "").strip()
+            if regex_usuario.fullmatch(txt):
+                usuarios.append(txt)
+        except Exception:
+            continue
+
+    usuarios = list(dict.fromkeys(usuarios))
+
+    # 4) Cierra el menú
+    d.press("back")
+    time.sleep(0.3)
+
+    log_ok(f"[{udid}] Cuentas registradas: {', '.join(usuarios)}")
+    return usuarios
+
+# —– lee el flag --out-dir si existe —–
+out_dir = None
+if "--out-dir" in sys.argv:
+    idx = sys.argv.index("--out-dir")
+    # asume que siempre hay valor después
+    if idx + 1 < len(sys.argv):
+        out_dir = sys.argv[idx + 1]
+        # limpia sys.argv para que no estorbe luego
+        del sys.argv[idx:idx+2]
+
+# Caídas a la lógica anterior
+if out_dir:
+    BASE_OUTPUT = out_dir
+elif getattr(sys, "frozen", False):
+    BASE_OUTPUT = os.path.dirname(sys.executable)
+else:
+    BASE_OUTPUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+
+CUENTAS_TEMP_PATH = os.path.join(BASE_OUTPUT, "accounts.json")
+
+if "--leer-cuentas" in sys.argv:
+    # Eliminamos el flag para no liarnos después
+    sys.argv.remove("--leer-cuentas")
+
+    # 1. Encontrar los dispositivos USB
+    dispositivos = obtener_dispositivos_usb()
+    todas_cuentas = []
+
+    # 2. Registrar en memoria (no publicamos nada)
+    for udid in dispositivos:
+        d = connect_device(udid)
+        cuentas = registrar_cuentas_dispositivo_u2(d, udid)
+        for u in cuentas:
+            todas_cuentas.append({ "usuario": u, "device": udid })
+
+    
+
+    # 3. Volcar accounts.json
+    EXE_DIR = os.path.dirname(sys.executable)
+    accounts_lugar = os.path.join(EXE_DIR, "accounts.json")
+
+    with open(CUENTAS_TEMP_PATH, "w", encoding="utf-8") as f:
+        json.dump(todas_cuentas, f, ensure_ascii=False, indent=2)
+
+    log_ok(f"Volcadas {len(todas_cuentas)} cuentas en {CUENTAS_TEMP_PATH}")
+    
+
+    print(f"Registradas {len(todas_cuentas)} cuentas.")
+    sys.exit(0)
+
+# Flag para usar dispositivo real vía USB
+use_usb = False
+if "--usb" in sys.argv:
+    use_usb = True
+    sys.argv.remove("--usb")
+
+use_social = False
+if "--social" in sys.argv:
+    use_social = True
+    sys.argv.remove("--social")
+
+def cargar_imagenes():
+    """
+    Devuelve una lista de rutas absolutas a las imágenes dentro de media/fotos
+    """
+    fotos_dir = RUTA_FOTOS
+    if not os.path.exists(fotos_dir):
+        log_warn("No se encontró el directorio media/fotos, se creará vacío")
+        os.makedirs(fotos_dir, exist_ok=True)
+
+    extensiones_validas = (".jpg", ".jpeg", ".png", ".webp")
+    imagenes = [
+        os.path.join(fotos_dir, f)
+        for f in os.listdir(fotos_dir)
+        if f.lower().endswith(extensiones_validas)
+    ]
+    return imagenes
 
 
 # Borrar carpeta del móvil si existe (evita residuos de ejecuciones anteriores)
@@ -119,26 +246,27 @@ def dividir_cuentas(lista, n):
     return [lista[i*k + min(i, m):(i+1)*k + min(i+1, m)] for i in range(n)]
 
 def cargar_entradas_con_tipo(ruta_excel):
-    wb = openpyxl.load_workbook(ruta_excel)
-    hoja = wb.active
     entradas = []
-    for fila in hoja.iter_rows(min_row=2, values_only=True):
-        if len(fila) <= 5 or not fila[5]:
-            break
-        tipo     = str(fila[5]).strip().lower()
-        mensaje  = str(fila[0]).strip() if fila[0] else None
-        foto     = int(fila[1])         if len(fila)>1 and fila[1] else None
-        pregunta = str(fila[2]).strip() if len(fila)>2 and fila[2] else None
-        opcion1  = str(fila[3]).strip() if len(fila)>3 and fila[3] else None
-        opcion2  = str(fila[4]).strip() if len(fila)>4 and fila[4] else None
-        entradas.append({
-            "tipo": tipo,
-            "mensaje": mensaje,
-            "foto": foto,
-            "pregunta": pregunta,
-            "opcion1": opcion1,
-            "opcion2": opcion2
-        })
+    with open(ruta_excel, "rb") as archivo:
+        wb = openpyxl.load_workbook(archivo)
+        hoja = wb.active
+        for fila in hoja.iter_rows(min_row=2, values_only=True):
+            if len(fila) <= 5 or not fila[5]:
+                break
+            tipo     = str(fila[5]).strip().lower()
+            mensaje  = str(fila[0]).strip() if fila[0] else None
+            foto     = int(fila[1])         if len(fila) > 1 and fila[1] else None
+            pregunta = str(fila[2]).strip() if len(fila) > 2 and fila[2] else None
+            opcion1  = str(fila[3]).strip() if len(fila) > 3 and fila[3] else None
+            opcion2  = str(fila[4]).strip() if len(fila) > 4 and fila[4] else None
+            entradas.append({
+                "tipo": tipo,
+                "mensaje": mensaje,
+                "foto": foto,
+                "pregunta": pregunta,
+                "opcion1": opcion1,
+                "opcion2": opcion2
+            })
     return entradas
 
 def obtener_dispositivos_usb(timeout=5):
@@ -222,75 +350,6 @@ def copiar_imagen_especifica(udid, ruta_origen, foto_num):
     log_ok(f"[{udid}] Escaneo multimedia solicitado para {nombre}")
 
     return True
-
-def registrar_cuentas_dispositivo_u2(d, udid):
-    log_info(f"[{udid}] ⏳ Intentando registrar cuentas…")
-
-    ruta_account = ACCOUNTS_PATH
-    # Solo a–z, 0–9, _ y . (3–30 chars)
-    regex_usuario = re.compile(r"^[a-z0-9._]{3,30}$")
-
-    # 🔼 Asegurar que la barra inferior sea visible
-    d.swipe(360, 400, 360, 1400, steps=10)  # swipe hacia arriba para mostrar barra
-    time.sleep(2)
-
-    # 1. Intenta por content-desc "Profile"
-    if d(description="Profile").exists:
-        sel = d(description="Profile")
-
-    # 2. Si no, intenta por resource-id corto
-    elif d(resourceId="barcelona_tab_profile").exists:
-        sel = d(resourceId="barcelona_tab_profile")
-
-    # 3. Si no, intenta por resource-id completo
-    elif d(resourceId="com.instagram.barcelona:id/barcelona_tab_profile").exists:
-        sel = d(resourceId="com.instagram.barcelona:id/barcelona_tab_profile")
-
-    # 4. Si no, intenta por descripción en español (por si el sistema está en español)
-    elif d(description="Perfil").exists:
-        sel = d(description="Perfil")
-
-    # 4) Ahora esperamos y abortamos si no lo encontramos
-    if not sel.wait(timeout=10):
-        log_error(f"[{udid}] botón de perfil no encontrado; abortando.")
-        raise RuntimeError  # o raise RuntimeError, según tu flujo
-
-    # 5) Ya podemos hacer el long-press con seguridad
-    b = sel.info["bounds"]
-    x = (b["left"] + b["right"]) // 2
-    y = (b["top"]  + b["bottom"]) // 2
-    long_press_shell(udid, x, y, int(1.5*1000))
-    time.sleep(3)
-
-    # 3) Recolecta únicamente el primer TextView de cada bloque
-    usuarios = []
-    for bloque in d(className="android.view.View"):
-        try:
-            # .child() te devuelve el primer hijo que cumpla el selector
-            tv = bloque.child(className="android.widget.TextView")
-            txt = (tv.get_text() or "").strip()
-            if regex_usuario.fullmatch(txt):
-                usuarios.append(txt)
-        except Exception:
-            continue
-
-    usuarios = list(dict.fromkeys(usuarios))
-
-    # 4) Cierra el menú
-    d.press("back")
-    time.sleep(0.3)
-
-    """
-    # 5) Guarda solo esos usuarios
-    cuentas = [
-        {"usuario": u, "correo": "", "contrasena": "", "device": udid}
-        for u in usuarios
-    ]
-    with open(ruta_account, "w", encoding="utf-8") as f:
-        json.dump(cuentas, f, indent=2, ensure_ascii=False)"""
-
-    log_ok(f"[{udid}] Cuentas registradas: {', '.join(usuarios)}")
-    return usuarios
 
 def esperar_tiempo(segundos_totales):
     for i in range(segundos_totales, 0, -1):
@@ -535,10 +594,10 @@ def esperar_tiempo_social_humano(segundos_totales, device: u2.Device,
                                 post_btn.click()
                                 log_ok(f"[{user}] 📤 Comentario enviado")
                             else:
-                                log_warn(f"[{user}] ⚠️ Botón de publicar no encontrado")
+                                log_warn(f"[{user}]Botón de publicar no encontrado")
                             time.sleep(random.uniform(1.5, 3.0))
                         else:
-                            log_warn(f"[{user}] ⚠️ Campo de comentario no apareció")
+                            log_warn(f"[{user}]Campo de comentario no apareció")
                         device.press("back")
                         time.sleep(1)
                 except Exception:
@@ -685,14 +744,14 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
                             except Exception as e:
                                 log_warn(f"[{udid}] ⚠️ Falló el click en 'Create' (intento {intento}): {e}")
                         else:
-                            log_warn(f"[{udid}] ❌ El botón 'Create' no apareció (intento {intento})")
+                            log_warn(f"[{udid}] El botón 'Create' no apareció (intento {intento})")
                     else:
-                        log_warn(f"[{udid}] ❌ No encontré el botón 'Create' (intento {intento})")
+                        log_warn(f"[{udid}] No encontré el botón 'Create' (intento {intento})")
 
                     time.sleep(1.5)
 
                 if not success:
-                    log_error(f"[{udid}] ❌ Tras 3 intentos no se pudo hacer click en 'Create', saltando cuenta")
+                    log_error(f"[{udid}] Tras 3 intentos no se pudo hacer click en 'Create', saltando cuenta")
                     #d.app_start("com.instagram.barcelona")
                     #time.sleep(2)
                     continue
@@ -732,14 +791,14 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
                                 except Exception as e:
                                     log_warn(f"[{udid}] ⚠️ Falló el click en 'Post' (intento {intento}): {e}")
                             else:
-                                log_warn(f"[{udid}] ❌ El botón 'Post' no apareció (intento {intento})")
+                                log_warn(f"[{udid}] El botón 'Post' no apareció (intento {intento})")
                         else:
-                            log_warn(f"[{udid}] ❌ No encontré el botón 'Post' (intento {intento})")
+                            log_warn(f"[{udid}] No encontré el botón 'Post' (intento {intento})")
 
                         time.sleep(1.5)
 
                     if not success:
-                        log_error(f"[{udid}] ❌ Tras 3 intentos no se pudo hacer click en 'Post', saltando cuenta")
+                        log_error(f"[{udid}] Tras 3 intentos no se pudo hacer click en 'Post', saltando cuenta")
                         continue
 
                     revisar_posted(udid, d)
@@ -906,63 +965,72 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
             continue
 
 def main():
-    # limpiar countdown
+    # ── 1) Limpieza del countdown global ────────────────────────────────
     if os.path.exists(DEFAULT_COUNTDOWN_FILE):
         os.remove(DEFAULT_COUNTDOWN_FILE)
 
+    # ── 2) Inicializa el log general ────────────────────────────────────
     with open(DEFAULT_LOG_PATH, "w", encoding="utf-8") as f:
         f.write("📄 Log de publicaciones\n========================\n")
 
+    # ── 3) Arranca adb ───────────────────────────────────────────────────
     subprocess.run("adb kill-server && adb start-server", shell=True)
 
+    # ── 4) Carga el Excel ────────────────────────────────────────────────
     espera_segundos = 600
     if "--wait" in sys.argv:
         i = sys.argv.index("--wait")
         espera_segundos = int(sys.argv[i+1])
         sys.argv.pop(i); sys.argv.pop(i)
 
-    excel = "mensajes.xlsx"
-    entradas = cargar_entradas_con_tipo(excel)
-    mensajes_texto = cargar_mensajes_texto(excel)
-
+    entradas = cargar_entradas_con_tipo("mensajes.xlsx")
+    mensajes_texto = cargar_mensajes_texto("mensajes.xlsx")
     if not entradas:
         log_warn("Sin entradas en Excel, saliendo")
         return
 
-    dispositivos = obtener_dispositivos_usb()
-    log_info(f"Dispositivos: {dispositivos}")
+    # ── 5) Carga o registra las cuentas ─────────────────────────────────
+    #    - Si ACCOUNTS_PATH no existe o está vacío [], registra UNA SOLA VEZ
+    try:
+        with open(ACCOUNTS_PATH, "r", encoding="utf-8") as f:
+            todas_cuentas = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        todas_cuentas = []
 
-    # 1) Registra en memoria, sin pisar
-    todas_cuentas = []
-    for udid in dispositivos:
-        d = connect_device(udid)
-        d.app_start("com.instagram.barcelona")
-        usuarios = registrar_cuentas_dispositivo_u2(d, udid)
-        for u in usuarios:
-            todas_cuentas.append({
-                "usuario": u,
-                "correo": "",
-                "contrasena": "",
-                "device": udid
-            })
+    if not todas_cuentas:
+        dispositivos = obtener_dispositivos_usb()
+        log_info(f"Dispositivos detectados para registro: {dispositivos}")
+        for udid in dispositivos:
+            d = connect_device(udid)
+            d.app_start("com.instagram.barcelona")
+            usuarios = registrar_cuentas_dispositivo_u2(d, udid)
+            for u in usuarios:
+                todas_cuentas.append({
+                    "usuario": u,
+                    "correo": "",
+                    "contrasena": "",
+                    "device": udid
+                })
+        # guarda SOLO si había que registrar
+        with open(ACCOUNTS_PATH, "w", encoding="utf-8") as f:
+            json.dump(todas_cuentas, f, indent=2, ensure_ascii=False)
+        log_ok(f"Registradas y volcadas {len(todas_cuentas)} cuentas en accounts.json")
+    else:
+        log_info(f"Cargando {len(todas_cuentas)} cuentas desde accounts.json")
 
-
-    # 2) Guarda TODO el JSON de golpe
-    with open(ACCOUNTS_PATH, "w", encoding="utf-8") as f:
-        json.dump(todas_cuentas, f, indent=2, ensure_ascii=False)
-
-    # 3) construir un dict que asocie cada UDID con su lista
+    # ── 6) Agrupa cuentas por dispositivo ────────────────────────────────
+    dispositivos = list({c["device"] for c in todas_cuentas})
     cuentas_por_dispositivo = { ud: [] for ud in dispositivos }
     for c in todas_cuentas:
         cuentas_por_dispositivo[c["device"]].append(c)
 
+    log_info(f"🏁 Arrancando publicación – espera={espera_segundos}s – "
+             f"cuentas totales={len(todas_cuentas)}")
 
-    log_info(f"🏁 Arrancando en modo {'USB' if use_usb else 'AVD'} – espera={espera_segundos}s – cuentas={len(todas_cuentas)} – fotos en {RUTA_FOTOS}")
-
+    # ── 7) Lanza un hilo por cada dispositivo ────────────────────────────
     threads = []
-    for udid in dispositivos:
+    for udid, grupo in cuentas_por_dispositivo.items():
         device_locks[udid] = threading.Lock()
-        grupo = cuentas_por_dispositivo.get(udid, [])
         t = threading.Thread(
             target=publicar_con_u2,
             args=(udid, entradas, mensajes_texto, grupo, espera_segundos),
@@ -970,8 +1038,10 @@ def main():
         )
         t.start()
         threads.append(t)
+
     for t in threads:
         t.join()
+
 
 if __name__ == "__main__":
     main()

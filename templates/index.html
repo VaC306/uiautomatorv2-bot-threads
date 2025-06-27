@@ -16,28 +16,19 @@
 </head>
 <!-- no needs bg-light aquí, lo pinta style.css -->
 
-<script>
-window.addEventListener('beforeunload', function (e) {
-    let isRunning = false;
-
-    // Esta llamada es síncrona (desaconsejada normalmente) pero necesaria aquí
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', '/status', false);  // `false` para que sea sincrónica
-    xhr.send(null);
-
-    if (xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        isRunning = response.running;
-    }
-
-    if (isRunning) {
-        const msg = '🚫 El bot todavía está en ejecución. Por favor, detén el bot antes de salir.';
-        e.preventDefault();
-        e.returnValue = msg; // Chrome requiere esta asignación
-        return msg;
-    }
-});
-</script>
+<!-- Mostrar aquí los flash messages -->
+  <div class="container mt-3">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ msg }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
 
 
 <body>
@@ -51,14 +42,6 @@ window.addEventListener('beforeunload', function (e) {
   </nav>
 
   <div class="container">
-
-    <!-- Botón para gestionar cuentas -->
-    <div class="d-flex justify-content-end mb-3">
-      <a href="{{ url_for('seleccionar_cuentas') }}" class="btn btn-outline-secondary">
-        ⚙️ Gestionar cuentas
-      </a>
-    </div>
-
     <!-- Card de estado y controles -->
     <div class="card mb-4 shadow-sm">
       <div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-center">
@@ -111,8 +94,16 @@ window.addEventListener('beforeunload', function (e) {
           </form>
           <!-- FORMULARIO DE DETENER -->
           <form action="{{ url_for('detener_bot') }}" method="post" class="d-inline">
-            <button class="btn btn-danger" id="stop-btn" {% if not bot_running %}disabled{% endif %}>
+            <button class="btn btn-danger me-2" id="stop-btn" {% if not bot_running %}disabled{% endif %}>
               ✋ Detener
+            </button>
+          </form>
+
+          <form action="{{ url_for('leer_cuentas') }}" method="post" class="d-inline">
+            <button type="submit"
+                    class="btn btn-outline-secondary me-2"
+                    {% if bot_running %} disabled {% endif %}>
+              🔄 Leer cuentas
             </button>
           </form>
         </div>
@@ -139,42 +130,71 @@ window.addEventListener('beforeunload', function (e) {
       </div>
     </div>
 
-
-    <!-- Card de countdown -->
-    <div class="card mb-4 shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title">⏱ Siguiente ciclo en:</h5>
-        <div class="progress" style="height: 2rem;">
-          <div
-            id="countdown-progress"
-            class="progress-bar progress-bar-striped progress-bar-animated bg-info"
-            role="progressbar"
-            style="width: 100%"
-          >--:--</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Estado por dispositivo -->
-    {% set devices = device_statuses.items() or [('publicaciones', '')] %}
-    {% for udid, action in devices %}
-    <div class="card mb-4 shadow-sm device-card" data-udid="{{ udid }}">
+    <!-- Estado publicaciones -->
+    <div
+      class="card mb-4 shadow-sm device-card transition-card {% if bot_running %}bg-running{% else %}bg-stopped{% endif %}"
+      data-udid="publicaciones"
+    >
       <div class="card-body d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
           <span class="device-icon me-3 text-{{ 'success' if bot_running else 'danger' }}" style="font-size: 1.2rem;">📱</span>
           <div>
-            <h5 class="card-title mb-0">{{ udid }}</h5>
-            <small class="action-text">{{ action }}</small>
+            <h5 class="card-title mb-0">publicaciones</h5>
+            <small class="action-text">{{ publicaciones }}</small>
           </div>
         </div>
-        <a href="{{ url_for('download_log', udid=udid) }}" class="btn btn-outline-secondary btn-sm">⬇️ Log</a>
+        <button onclick="guardarLog(this)" data-udid="publicaciones" class="btn btn-outline-secondary btn-sm">
+          👾 Guardar
+        </button>
       </div>
     </div>
+
+    {% for udid, action in other_devices.items() %}
+      <div
+        class="card mb-4 shadow-sm device-card transition-card {% if bot_running %}bg-running{% else %}bg-stopped{% endif %}"
+        data-udid="{{ udid }}"
+      >
+        <div class="card-body d-flex flex-column">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <span class="device-icon me-3 text-{{ 'success' if bot_running else 'danger' }}" style="font-size: 1.2rem;">📱</span>
+              <div>
+                <h5 class="card-title mb-0">{{ udid }}</h5>
+                <small class="action-text">
+                  {% if action %}
+                    {{ action }}
+                  {% else %}
+                    ⏳ Esperando primera actividad...
+                  {% endif %}
+                </small>
+              </div>
+            </div>
+            <button onclick="guardarLog(this)" data-udid="{{ udid }}" class="btn btn-outline-secondary btn-sm">
+              👾 Guardar
+            </button>
+          </div>
+
+          <!-- Barra de progreso individual -->
+          <div class="progress mt-2" style="height: 1.25rem;">
+            <div
+              id="progress-{{ udid }}"
+              class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              style="width: 100%"
+            >--:--</div>
+          </div>
+        </div>
+      </div>
     {% endfor %}
 
-    <footer class="text-center text-muted my-4">
-      if you feel lost: <strong>elpursi_306_</strong> (discord)
+
+    <footer class="text-center my-4">
+      unete a la comunidad  
+      <a href="https://discord.gg/K5qF8x3Z" target="_blank" rel="noopener">
+        <strong>nozomi</strong>
+      </a>
     </footer>
+
   </div>
 
   <!-- Bootstrap JS -->
@@ -197,38 +217,51 @@ window.addEventListener('beforeunload', function (e) {
     let pollingId = null;
 
     async function pollAll() {
-      try {
-        // 1) Estado
-        const { running } = await fetch('{{ url_for("status") }}').then(r => r.json());
-        statusText.innerHTML = running
-          ? '<span class="badge bg-success">Corriendo</span>'
-          : '<span class="badge bg-danger">Detenido</span>';
-        stopBtn.disabled  = !running;
-        launchBtn.disabled = running;
+      // 1) Estado global del bot
+      const { running } = await fetch('{{ url_for("status") }}').then(r => r.json());
+      statusText.innerHTML = running
+        ? '<span class="badge bg-success">Corriendo</span>'
+        : '<span class="badge bg-danger">Detenido</span>';
+      stopBtn.disabled    = !running;
+      launchBtn.disabled  = running;
+      leerBtn.disabled    = running;
 
-        // 2) Countdown
-        const cd = await fetch('{{ url_for("countdown") }}').then(r => r.json());
-        if (cd.remaining > 0) {
-          const mm = String(cd.mins).padStart(2,'0');
-          const ss = String(cd.secs).padStart(2,'0');
-          countdownBar.textContent = `${mm}:${ss}`;
-          countdownBar.style.width = `${(cd.remaining/cd.total)*100}%`;
-        } else {
-          countdownBar.textContent = '—';
-          countdownBar.style.width = '0%';
-        }
+      // 2) Para cada tarjeta de dispositivo…
+      for (const card of deviceCards) {
+        const udid = card.dataset.udid;
 
-          // 3) Estado por dispositivo
-          for (const card of deviceCards) {
-            const udid = card.dataset.udid;
-            const { action } = await fetch(actionBase + encodeURIComponent(udid)).then(r => r.json());
-            card.querySelector('.action-text').textContent = action || 'Sin actividad';
-            const icon = card.querySelector('.device-icon');
-            icon.classList.toggle('text-success', running);
-            icon.classList.toggle('text-danger', !running);
+        // 2.1) Actualiza el texto de la última acción
+        const { action } = await fetch(`{{ url_for("last_action", udid="") }}${encodeURIComponent(udid)}`)
+                                  .then(r => r.json());
+        card.querySelector('.action-text').textContent = action || 'Sin actividad';
+
+        // 2.2) Colorea el borde según el estado global
+        card.classList.toggle('bg-running', running);
+        card.classList.toggle('bg-stopped', !running);
+
+        // 2.3) Actualiza la barra de progreso individual
+        try {
+          const cd = await fetch(`/countdown/${encodeURIComponent(udid)}`).then(r => r.json());
+          const bar = card.querySelector(`#progress-${udid}`);
+          if (bar) {
+            if (cd.remaining > 0) {
+              const mm = String(cd.mins).padStart(2,'0');
+              const ss = String(cd.secs).padStart(2,'0');
+              bar.textContent = `${mm}:${ss}`;
+              bar.style.width  = `${(cd.remaining / cd.total) * 100}%`;
+            } else {
+              bar.textContent = '—';
+              bar.style.width = '0%';
+            }
           }
-      } catch (e) {
-        console.error('Polling error:', e);
+        } catch (err) {
+          // si falla la petición, dejamos la barra a 0
+          const bar = card.querySelector(`#progress-${udid}`);
+          if (bar) {
+            bar.textContent = '—';
+            bar.style.width = '0%';
+          }
+        }
       }
     }
 
@@ -268,5 +301,25 @@ window.addEventListener('beforeunload', function (e) {
       localStorage.setItem('theme', next);
     });
   </script>
+
+  <!-- Script para guardar logs en carpeta local -->
+  <script>
+    async function guardarLog(btn) {
+      const udid = btn.dataset.udid;
+      try {
+        const res = await window.pywebview.api.guardar_log(udid);
+        if (res.status === "ok") {
+          alert(`✅ Log guardado en:\n${res.destino}`);
+        } else {
+          alert(`❌ Error: ${res.message}`);
+        }
+      } catch (err) {
+        alert("❌ No se pudo ejecutar la acción");
+        console.error(err);
+      }
+    }
+
+  </script>
+
 </body>
 </html>
