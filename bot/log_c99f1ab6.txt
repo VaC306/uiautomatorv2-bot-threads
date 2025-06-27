@@ -1,0 +1,6 @@
+📄 Log de publicaciones
+========================
+[2025-06-27 14:30:58] ℹ️ INFO: Conectando a dispositivo c99f1ab6…
+[2025-06-27 14:30:58] ✅ OK: Conectado vía USB a c99f1ab6
+[2025-06-27 14:30:59] ✅ OK: [c99f1ab6] Animaciones OFF
+[2025-06-27 14:31:01] ℹ️ INFO: [c99f1ab6] Publicando en cisea_judith

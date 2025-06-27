@@ -1,0 +1,6 @@
+📄 Log de publicaciones
+========================
+[2025-06-27 14:30:58] ℹ️ INFO: Conectando a dispositivo ZY22JXL29K…
+[2025-06-27 14:30:58] ✅ OK: Conectado vía USB a ZY22JXL29K
+[2025-06-27 14:30:58] ✅ OK: [ZY22JXL29K] Animaciones OFF
+[2025-06-27 14:31:01] ℹ️ INFO: [ZY22JXL29K] Publicando en ciseajudi123

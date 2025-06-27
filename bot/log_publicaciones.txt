@@ -1,115 +1,17 @@
 📄 Log de publicaciones
 ========================
-[2025-06-25 02:48:09] ℹ️ INFO: 🔌 Buscando dispositivos USB conectados…
-[2025-06-25 02:48:10] ℹ️ INFO: 📥 Salida adb devices:
+[2025-06-27 14:38:58] ℹ️ INFO: 🔌 Buscando dispositivos USB conectados…
+[2025-06-27 14:38:58] ℹ️ INFO: 📥 Salida adb devices:
 List of devices attached
+ZY22JXL29K	device
 c99f1ab6	device
 
-[2025-06-25 02:48:10] ✅ OK: ✅ Dispositivos USB detectados: ['c99f1ab6']
-[2025-06-25 02:48:10] ℹ️ INFO: Dispositivos: ['c99f1ab6']
-[2025-06-25 02:48:10] ℹ️ INFO: Conectando a dispositivo c99f1ab6…
-[2025-06-25 02:48:10] ✅ OK: Conectado vía USB a c99f1ab6
-[2025-06-25 02:48:11] ℹ️ INFO: [c99f1ab6] ⏳ Intentando registrar cuentas…
-[2025-06-25 02:48:21] ✅ OK: [c99f1ab6] Cuentas registradas: ciseajudith12, ciseajudith1234, cisea123, ciseajudith10, cisea_judith
-[2025-06-25 02:48:21] ℹ️ INFO: 🏁 Arrancando en modo USB – espera=600s – cuentas=5 – fotos en C:\Users\rishi\Desktop\PROGRAMAS CUSTOM\BOT SPAMMER\uiautomator-usb-threads\media\fotos
-[2025-06-25 02:48:21] ℹ️ INFO: Conectando a dispositivo c99f1ab6…
-[2025-06-25 02:48:21] ✅ OK: Conectado vía USB a c99f1ab6
-[2025-06-25 02:48:22] ✅ OK: [c99f1ab6] Animaciones OFF
-[2025-06-25 02:48:24] ℹ️ INFO: [c99f1ab6] Publicando en ciseajudith12
-[2025-06-25 02:48:30] ✅ OK: [c99f1ab6] Ya en 'ciseajudith12', no cambio de cuenta
-[2025-06-25 02:48:38] ⚠️ WARN: [c99f1ab6] ❌ No encontré el botón 'Create' (intento 1)
-[2025-06-25 02:48:40] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 2)
-[2025-06-25 02:48:40] [c99f1ab6] ✍️ Mensaje: Se han grabado detonando?🫣
-[2025-06-25 02:48:41] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 02:48:45] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 02:48:48] ℹ️ INFO: [c99f1ab6] Publicando en ciseajudith1234
-[2025-06-25 02:48:55] ✅ OK: [c99f1ab6] Cambio a cuenta 'ciseajudith1234' correcto
-[2025-06-25 02:49:03] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 02:49:03] [c99f1ab6] ✍️ Mensaje: Ha solicitado seguirte desde Barcelona.
-[2025-06-25 02:49:03] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 02:49:09] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 02:49:12] ℹ️ INFO: [c99f1ab6] Publicando en cisea123
-[2025-06-25 02:49:19] ✅ OK: [c99f1ab6] Cambio a cuenta 'cisea123' correcto
-[2025-06-25 02:49:26] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 02:49:26] [c99f1ab6] ✍️ Mensaje: Corazón ❤ el que esté en linea 💚
-y paso whatsApp..👋
-[2025-06-25 02:49:26] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 02:49:31] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 02:49:34] ℹ️ INFO: [c99f1ab6] Publicando en ciseajudith10
-[2025-06-25 02:49:41] ✅ OK: [c99f1ab6] Cambio a cuenta 'ciseajudith10' correcto
-[2025-06-25 02:49:48] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 02:49:48] [c99f1ab6] ✍️ Mensaje: Te quiero llamar
-[2025-06-25 02:49:48] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 02:49:53] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 02:49:56] ℹ️ INFO: [c99f1ab6] Publicando en cisea_judith
-[2025-06-25 02:50:03] ✅ OK: [c99f1ab6] Cambio a cuenta 'cisea_judith' correcto
-[2025-06-25 02:50:10] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 02:50:10] [c99f1ab6] ✍️ Mensaje: Me encanta y te escribo 🥵🔥🔥
-[2025-06-25 02:50:11] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 02:50:17] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 02:50:20] ✅ OK: [c99f1ab6] 🏁 Publicación completada — entramos en modo social durante 600s
-[2025-06-25 02:50:26] ✅ OK: 🔝 Pulsado el botón 'Feed' para subir al inicio.
-[2025-06-25 02:50:28] ✅ OK: 👤 Cuenta actual detectada: cisea_judith
-[2025-06-25 02:50:35] ✅ OK: 🔄 Cambiado a cuenta 'cisea123'
-[2025-06-25 02:51:19] ✅ OK: [cisea123] 🧡 Like #1
-[2025-06-25 02:51:39] ℹ️ INFO: [cisea123] 💤 Descansando 65.7s antes de la siguiente cuenta
-[2025-06-25 02:52:49] ✅ OK: 🔝 Pulsado el botón 'Feed' para subir al inicio.
-[2025-06-25 02:52:51] ✅ OK: 👤 Cuenta actual detectada: cisea123
-[2025-06-25 02:52:58] ✅ OK: 🔄 Cambiado a cuenta 'ciseajudith12'
-[2025-06-25 02:53:18] ✅ OK: [ciseajudith12] 🧡 Like #1
-[2025-06-25 02:53:38] ✅ OK: [ciseajudith12] 🧡 Like #2
-[2025-06-25 02:54:00] ℹ️ INFO: [ciseajudith12] 💤 Descansando 50.7s antes de la siguiente cuenta
-[2025-06-25 02:54:56] ✅ OK: 🔝 Pulsado el botón 'Feed' para subir al inicio.
-[2025-06-25 02:54:58] ✅ OK: 👤 Cuenta actual detectada: ciseajudith12
-[2025-06-25 02:55:04] ✅ OK: 🔄 Cambiado a cuenta 'cisea_judith'
-[2025-06-25 02:55:25] ✅ OK: [cisea_judith] 🧡 Like #1
-[2025-06-25 02:55:45] ✅ OK: [cisea_judith] 🧡 Like #2
-[2025-06-25 02:56:07] ℹ️ INFO: [cisea_judith] 💤 Descansando 63.7s antes de la siguiente cuenta
-[2025-06-25 02:57:16] ✅ OK: 🔝 Pulsado el botón 'Feed' para subir al inicio.
-[2025-06-25 02:57:19] ✅ OK: 👤 Cuenta actual detectada: cisea_judith
-[2025-06-25 02:57:25] ✅ OK: 🔄 Cambiado a cuenta 'ciseajudith1234'
-[2025-06-25 02:57:45] ✅ OK: [ciseajudith1234] 🧡 Like #1
-[2025-06-25 02:58:08] ℹ️ INFO: [ciseajudith1234] 💤 Descansando 50.8s antes de la siguiente cuenta
-[2025-06-25 02:59:05] ✅ OK: 🔝 Pulsado el botón 'Feed' para subir al inicio.
-[2025-06-25 02:59:07] ✅ OK: 👤 Cuenta actual detectada: ciseajudith1234
-[2025-06-25 02:59:13] ✅ OK: 🔄 Cambiado a cuenta 'ciseajudith10'
-[2025-06-25 02:59:21] ✅ OK: [ciseajudith10] 🧡 Like #1
-[2025-06-25 03:00:22] ℹ️ INFO: [ciseajudith10] 💤 Descansando 62.1s antes de la siguiente cuenta
-[2025-06-25 03:01:26] ✅ OK: [c99f1ab6] 🤖 Descanso social finalizado
-[2025-06-25 03:01:26] ✅ OK: [c99f1ab6] Animaciones OFF
-[2025-06-25 03:01:29] ℹ️ INFO: [c99f1ab6] Publicando en ciseajudith12
-[2025-06-25 03:01:35] ✅ OK: [c99f1ab6] Ya en 'ciseajudith12', no cambio de cuenta
-[2025-06-25 03:01:43] ⚠️ WARN: [c99f1ab6] ❌ No encontré el botón 'Create' (intento 1)
-[2025-06-25 03:01:45] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 2)
-[2025-06-25 03:01:45] [c99f1ab6] ✍️ Mensaje: Te quiero llamar
-[2025-06-25 03:01:46] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 03:01:50] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 03:01:53] ℹ️ INFO: [c99f1ab6] Publicando en ciseajudith1234
-[2025-06-25 03:02:00] ✅ OK: [c99f1ab6] Cambio a cuenta 'ciseajudith1234' correcto
-[2025-06-25 03:02:07] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 03:02:07] [c99f1ab6] ✍️ Mensaje: Le ha gustado tu perfil
-[2025-06-25 03:02:07] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 03:02:11] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 03:02:14] ℹ️ INFO: [c99f1ab6] Publicando en cisea123
-[2025-06-25 03:02:21] ✅ OK: [c99f1ab6] Cambio a cuenta 'cisea123' correcto
-[2025-06-25 03:02:28] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 03:02:28] [c99f1ab6] ✍️ Mensaje: Holaaaa nos seguimos 🎀 Soy nueva🥺
-[2025-06-25 03:02:29] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 03:02:34] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 03:02:37] ℹ️ INFO: [c99f1ab6] Publicando en ciseajudith10
-[2025-06-25 03:02:44] ✅ OK: [c99f1ab6] Cambio a cuenta 'ciseajudith10' correcto
-[2025-06-25 03:02:51] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 03:02:52] [c99f1ab6] ✍️ Mensaje: Devuelvo rapido en instagram🥰🥰
-[2025-06-25 03:02:52] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 03:02:59] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 03:03:02] ℹ️ INFO: [c99f1ab6] Publicando en cisea_judith
-[2025-06-25 03:03:09] ✅ OK: [c99f1ab6] Cambio a cuenta 'cisea_judith' correcto
-[2025-06-25 03:03:16] ✅ OK: [c99f1ab6] Click en 'Create' realizado correctamente (intento 1)
-[2025-06-25 03:03:17] [c99f1ab6] ✍️ Mensaje: Corazón ❤ el que esté en linea 💚
-y paso whatsApp..👋
-[2025-06-25 03:03:17] ✅ OK: [c99f1ab6] Click en 'Post' realizado correctamente (intento 1)
-[2025-06-25 03:03:23] [c99f1ab6] 🆗 Confirmado con texto 'Posted'
-[2025-06-25 03:03:26] ✅ OK: [c99f1ab6] 🏁 Publicación completada — entramos en modo social durante 600s
-[2025-06-25 03:03:32] ✅ OK: 🔝 Pulsado el botón 'Feed' para subir al inicio.
-[2025-06-25 03:03:34] ✅ OK: 👤 Cuenta actual detectada: cisea_judith
-[2025-06-25 03:03:41] ✅ OK: 🔄 Cambiado a cuenta 'ciseajudith12'
+[2025-06-27 14:38:58] ✅ OK: ✅ Dispositivos USB detectados: ['ZY22JXL29K', 'c99f1ab6']
+[2025-06-27 14:38:58] ℹ️ INFO: Dispositivos: ['ZY22JXL29K', 'c99f1ab6']
+[2025-06-27 14:38:58] ℹ️ INFO: Conectando a dispositivo ZY22JXL29K…
+[2025-06-27 14:38:59] ✅ OK: Conectado vía USB a ZY22JXL29K
+[2025-06-27 14:39:00] ℹ️ INFO: [ZY22JXL29K] ⏳ Intentando registrar cuentas…
+[2025-06-27 14:39:10] ✅ OK: [ZY22JXL29K] Cuentas registradas: ciseajudi123, ciseajudiii, judicisea12, cisea_12
+[2025-06-27 14:39:10] ℹ️ INFO: Conectando a dispositivo c99f1ab6…
+[2025-06-27 14:39:11] ✅ OK: Conectado vía USB a c99f1ab6
+[2025-06-27 14:39:11] ℹ️ INFO: [c99f1ab6] ⏳ Intentando registrar cuentas…
