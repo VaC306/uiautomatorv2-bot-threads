@@ -41,6 +41,11 @@ BOT_DIR         = os.path.join(BASE_PATH, "bot")
 MESSAGES_PATH   = os.path.join(BOT_DIR, "mensajes.xlsx")
 LOG_PATH        = os.path.join(BOT_DIR, "log_publicaciones.txt")
 LOG_PATH_TEMPLATE = os.path.join(BOT_DIR, "log_%s.txt")
+
+# Sanitiza el UDID para usarlo como parte del nombre de archivo
+def safe_udid(udid: str) -> str:
+    """Replace characters that are problematic in filenames."""
+    return "".join(c if c.isalnum() or c in "._-" else "_" for c in udid)
 if getattr(sys, "frozen", False):
     ACCOUNTS_PATH = os.path.join(EXE_DIR, "accounts.json")
 else:
@@ -299,7 +304,7 @@ def remove_account():
 @app.route("/log/<udid>")
 def log_route(udid=""):
     if udid:
-        path = LOG_PATH_TEMPLATE % udid
+        path = LOG_PATH_TEMPLATE % safe_udid(udid)
     else:
         path = LOG_PATH
     try:
@@ -311,7 +316,7 @@ def log_route(udid=""):
 
 @app.route("/last_action/<udid>")
 def last_action(udid):
-    path = LOG_PATH_TEMPLATE % udid
+    path = LOG_PATH_TEMPLATE % safe_udid(udid)
     last = ""
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -324,7 +329,7 @@ def last_action(udid):
 
 @app.route("/download_log/<udid>")
 def download_log(udid):
-    path = LOG_PATH_TEMPLATE % udid
+    path = LOG_PATH_TEMPLATE % safe_udid(udid)
     if not os.path.exists(path):
         return "", 404
     return send_file(path, as_attachment=True)
