@@ -22,6 +22,27 @@
   --btn-outline:     #e4e4e4;
 }
 
+/* Quitar cualquier margin blanco */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+}
+
+/* Tu navbar será el área que arrastras */
+.navbar {
+  -webkit-app-region: drag;
+}
+
+/* Todos los botones y enlaces dentro no deben arrastrar */
+.navbar button,
+.navbar a,
+.navbar input {
+  -webkit-app-region: no-drag;
+}
+
+
+
 body {
   background-color: var(--bg-color);
   color:            var(--text-color);

@@ -37,7 +37,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='VaC306BotThreads',
+    name='nozomi',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -49,7 +49,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='bot.ico'
+    icon='samuraipeq.ico'
 )
 
 
@@ -60,5 +60,5 @@ coll = COLLECT(
     a.datas,
     strip=False,
     upx=True,
-    name='VaC306BotThreads'
+    name='nozomi'
 )

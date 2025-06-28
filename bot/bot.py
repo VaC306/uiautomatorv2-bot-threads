@@ -1038,6 +1038,7 @@ def main():
         )
         t.start()
         threads.append(t)
+        time.sleep(4)  # Espera 2 segundos entre hilos
 
     for t in threads:
         t.join()

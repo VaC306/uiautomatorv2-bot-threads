@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bot Threads</title>
+  <title>nozomi</title>
 
   <!-- Bootstrap CSS -->
   <link
@@ -16,7 +16,17 @@
 </head>
 <!-- no needs bg-light aquí, lo pinta style.css -->
 
-<!-- Mostrar aquí los flash messages -->
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">🥷nozomi🥷</a>
+      <!-- Toggle modo claro/oscuro -->
+      <button id="theme-toggle" class="btn btn-outline-light ms-auto">🌓</button>
+    </div>
+  </nav>
+
+  <!-- Mostrar aquí los flash messages -->
   <div class="container mt-3">
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -29,17 +39,6 @@
       {% endif %}
     {% endwith %}
   </div>
-
-
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark mb-4">
-    <div class="container">
-      <a class="navbar-brand" href="#">🤖 Bot Threads 🤖</a>
-      <!-- Toggle modo claro/oscuro -->
-      <button id="theme-toggle" class="btn btn-outline-light ms-auto">🌓</button>
-    </div>
-  </nav>
 
   <div class="container">
     <!-- Card de estado y controles -->
@@ -207,14 +206,14 @@
   
   <!-- Polling unificado y optimizado -->
     <script>
-      const deviceCards   = document.querySelectorAll('.device-card');
-      const actionBase    = '{{ url_for("last_action", udid="") }}';
-      const statusText    = document.getElementById('status-text');
-      const stopBtn       = document.getElementById('stop-btn');
-      const launchBtn     = document.querySelector('form[action="{{ url_for("lanzar_bot") }}"] button');
-      const countdownBar  = document.getElementById('countdown-progress');
-
+    const deviceCards   = document.querySelectorAll('.device-card');
+    const actionBase    = '{{ url_for("last_action", udid="") }}';
+    const statusText    = document.getElementById('status-text');
+    const stopBtn       = document.getElementById('stop-btn');
+    const launchBtn     = document.querySelector('form[action="{{ url_for("lanzar_bot") }}"] button');
+    const leerBtn       = document.querySelector('form[action="{{ url_for("leer_cuentas") }}"] button');
     let pollingId = null;
+    
 
     async function pollAll() {
       // 1) Estado global del bot
@@ -224,7 +223,6 @@
         : '<span class="badge bg-danger">Detenido</span>';
       stopBtn.disabled    = !running;
       launchBtn.disabled  = running;
-      leerBtn.disabled    = running;
 
       // 2) Para cada tarjeta de dispositivo…
       for (const card of deviceCards) {

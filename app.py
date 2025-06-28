@@ -532,9 +532,11 @@ if __name__ == "__main__":
     window=webview.create_window(
         "Bot Threads",
         "http://127.0.0.1:5000",
-        width=1500, height=1000,
+        frameless=False,
+        width=1400, height=1100,
         js_api=API(),
-        confirm_close=False
+        confirm_close=False,
+        background_color='#121212'
     )
     
     webview.start( gui='edgechromium' if sys.platform == 'win32' else None)
