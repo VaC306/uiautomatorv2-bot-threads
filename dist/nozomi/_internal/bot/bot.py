@@ -62,6 +62,11 @@ def connect_device(serial: str, timeout: float = 20.0):
         d = u2.connect_usb(serial)
         log_ok(f"Conectado vía USB a {serial}")
     d.wait_timeout = timeout
+    try:
+        d.app_start("com.instagram.barcelona")
+        d.wait_idle()
+    except Exception:
+        pass
     return d
 
 def obtener_dispositivos_usb(timeout=5):
@@ -83,14 +88,13 @@ def obtener_dispositivos_usb(timeout=5):
     log_warn("❌ No hay dispositivos USB detectados")
     return []
 
-def long_press_shell(udid, x, y, duration_ms):
-    # inyecta un gesto de pulsación larga usando adb shell input swipe
-    cmd = [
-        "adb", "-s", udid,
-        "shell", "input", "swipe",
-        str(x), str(y), str(x), str(y), str(duration_ms)
-    ]
-    subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+def long_press_shell(device: u2.Device, x: int, y: int, duration_ms: int):
+    """Realiza un pulsado largo en las coordenadas dadas."""
+    duration_s = duration_ms / 1000.0
+    try:
+        device.long_click(x, y, duration_s)
+    except Exception:
+        pass
 
 def registrar_cuentas_dispositivo_u2(d, udid):
     log_info(f"[{udid}] ⏳ Intentando registrar cuentas…")
@@ -127,7 +131,7 @@ def registrar_cuentas_dispositivo_u2(d, udid):
     b = sel.info["bounds"]
     x = (b["left"] + b["right"]) // 2
     y = (b["top"]  + b["bottom"]) // 2
-    long_press_shell(udid, x, y, int(1.5*1000))
+    long_press_shell(d, x, y, int(1.5*1000))
     time.sleep(3)
 
     # 3) Recolecta únicamente el primer TextView de cada bloque
@@ -531,7 +535,7 @@ def esperar_tiempo_social_humano(segundos_totales, device: u2.Device,
         b = sel.info["bounds"]
         cx = (b["left"] + b["right"]) // 2 + random.randint(-5, 5)
         cy = (b["top"] + b["bottom"]) // 2 + random.randint(-5, 5)
-        long_press_shell(device.serial, cx, cy, int(random.uniform(1.2, 1.8) * 1000))
+        long_press_shell(device, cx, cy, int(random.uniform(1.2, 1.8) * 1000))
         time.sleep(random.uniform(1.5, 2.5))
 
         wrapper = device.xpath(
@@ -561,7 +565,12 @@ def esperar_tiempo_social_humano(segundos_totales, device: u2.Device,
                 if likes_hechos >= max_likes or time.time() >= fin:
                     break
                 if random.random() < like_prob:
-                    info = btn.info["bounds"]
+                    if not btn.exists:
+                        continue
+                    try:
+                        info = btn.info["bounds"]
+                    except Exception:
+                        continue
                     tap_with_jitter(device, info)
                     likes_hechos += 1
                     log_ok(f"[{user}] 🧡 Like #{likes_hechos}")
@@ -689,10 +698,13 @@ def publicar_con_u2(udid, entradas, mensajes_texto, cuentas, espera_segundos):
                         d(description="Perfil"))
 
                     # 2) Long-press en el centro del selector
+                    if not sel.wait(timeout=5):
+                        log_warn(f"[{udid}] Selector de perfil no encontrado")
+                        continue
                     b = sel.info["bounds"]
                     x = (b["left"] + b["right"]) // 2
                     y = (b["top"]  + b["bottom"]) // 2
-                    long_press_shell(udid, x, y, int(1.5*1000))
+                    long_press_shell(d, x, y, int(1.5*1000))
                     time.sleep(3)
 
                     # 3) Espera y click en la cuenta
@@ -973,10 +985,7 @@ def main():
     with open(DEFAULT_LOG_PATH, "w", encoding="utf-8") as f:
         f.write("📄 Log de publicaciones\n========================\n")
 
-    # ── 3) Arranca adb ───────────────────────────────────────────────────
-    subprocess.run("adb kill-server && adb start-server", shell=True)
-
-    # ── 4) Carga el Excel ────────────────────────────────────────────────
+    # ── 3) Carga el Excel ────────────────────────────────────────────────
     espera_segundos = 600
     if "--wait" in sys.argv:
         i = sys.argv.index("--wait")
