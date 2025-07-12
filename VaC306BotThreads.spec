@@ -6,18 +6,25 @@ from PyInstaller.utils.hooks import collect_submodules
 block_cipher = None
 project_root = os.getcwd()
 
+hidden = (
+    collect_submodules('uiautomator2') +
+    collect_submodules('cryptography')
+)
+
 a = Analysis(
     ['app.py'],
     pathex=[project_root],
     binaries=[],
     datas=[
-        (os.path.join(project_root, 'bot', 'bot.py'),        'bot'),
-        (os.path.join(project_root, 'accounts.json'), '.'  ),
+        (os.path.join(project_root, 'bot'),                 'bot'),
+        (os.path.join(project_root, 'accounts.json'),       '.'),
+        (os.path.join(project_root, 'license.key'),         '.'),
+        (os.path.join(project_root, 'public_key.pem'),      '.'),
         (os.path.join(project_root, 'templates'),            'templates'),
         (os.path.join(project_root, 'static'),               'static'),
         (os.path.join(project_root, 'media'),                'media')
     ],
-    hiddenimports=[],
+    hiddenimports=hidden,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -37,7 +44,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='nozomi',
+    name='VaC306BotThreads',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

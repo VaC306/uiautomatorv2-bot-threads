@@ -18,13 +18,20 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+  <nav class="navbar navbar-expand-lg navbar-dark mb-4 position-relative">
     <div class="container">
       <a class="navbar-brand" href="#">🥷nozomi🥷</a>
       <!-- Toggle modo claro/oscuro -->
-      <button id="theme-toggle" class="btn btn-outline-light ms-auto">🌓</button>
+      <button id="theme-toggle" class="btn btn-outline-light ms-auto no-drag">🌓</button>
     </div>
+    <button
+      onclick="window.pywebview.api.cerrar()"
+      class="btn-close position-absolute no-drag"
+      style="top: 10px; right: 16px; z-index: 1030; -webkit-app-region: no-drag;"
+      aria-label="Cerrar"
+    ></button>
   </nav>
+  
 
   <!-- Mostrar aquí los flash messages -->
   <div class="container mt-3">

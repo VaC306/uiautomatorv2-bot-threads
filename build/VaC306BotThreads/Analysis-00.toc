@@ -4,7 +4,97 @@
   'SPAMMER\\uiautomatorv2-usb-threads',
   'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
   'SPAMMER\\uiautomatorv2-usb-threads'],
- [],
+ ['uiautomator2',
+  'uiautomator2.__main__',
+  'uiautomator2._input',
+  'uiautomator2._proto',
+  'uiautomator2._selector',
+  'uiautomator2.abstract',
+  'uiautomator2.base',
+  'uiautomator2.core',
+  'uiautomator2.exceptions',
+  'uiautomator2.ext',
+  'uiautomator2.ext.htmlreport',
+  'uiautomator2.ext.perf',
+  'uiautomator2.image',
+  'uiautomator2.screenrecord',
+  'uiautomator2.settings',
+  'uiautomator2.swipe',
+  'uiautomator2.utils',
+  'uiautomator2.version',
+  'uiautomator2.watcher',
+  'uiautomator2.xpath',
+  'cryptography',
+  'cryptography.__about__',
+  'cryptography.exceptions',
+  'cryptography.fernet',
+  'cryptography.hazmat',
+  'cryptography.hazmat._oid',
+  'cryptography.hazmat.backends',
+  'cryptography.hazmat.backends.openssl',
+  'cryptography.hazmat.backends.openssl.backend',
+  'cryptography.hazmat.bindings',
+  'cryptography.hazmat.bindings._rust',
+  'cryptography.hazmat.bindings.openssl',
+  'cryptography.hazmat.bindings.openssl._conditional',
+  'cryptography.hazmat.bindings.openssl.binding',
+  'cryptography.hazmat.decrepit',
+  'cryptography.hazmat.decrepit.ciphers',
+  'cryptography.hazmat.decrepit.ciphers.algorithms',
+  'cryptography.hazmat.primitives',
+  'cryptography.hazmat.primitives._asymmetric',
+  'cryptography.hazmat.primitives._cipheralgorithm',
+  'cryptography.hazmat.primitives._serialization',
+  'cryptography.hazmat.primitives.asymmetric',
+  'cryptography.hazmat.primitives.asymmetric.dh',
+  'cryptography.hazmat.primitives.asymmetric.dsa',
+  'cryptography.hazmat.primitives.asymmetric.ec',
+  'cryptography.hazmat.primitives.asymmetric.ed25519',
+  'cryptography.hazmat.primitives.asymmetric.ed448',
+  'cryptography.hazmat.primitives.asymmetric.padding',
+  'cryptography.hazmat.primitives.asymmetric.rsa',
+  'cryptography.hazmat.primitives.asymmetric.types',
+  'cryptography.hazmat.primitives.asymmetric.utils',
+  'cryptography.hazmat.primitives.asymmetric.x25519',
+  'cryptography.hazmat.primitives.asymmetric.x448',
+  'cryptography.hazmat.primitives.ciphers',
+  'cryptography.hazmat.primitives.ciphers.aead',
+  'cryptography.hazmat.primitives.ciphers.algorithms',
+  'cryptography.hazmat.primitives.ciphers.base',
+  'cryptography.hazmat.primitives.ciphers.modes',
+  'cryptography.hazmat.primitives.cmac',
+  'cryptography.hazmat.primitives.constant_time',
+  'cryptography.hazmat.primitives.hashes',
+  'cryptography.hazmat.primitives.hmac',
+  'cryptography.hazmat.primitives.kdf',
+  'cryptography.hazmat.primitives.kdf.argon2',
+  'cryptography.hazmat.primitives.kdf.concatkdf',
+  'cryptography.hazmat.primitives.kdf.hkdf',
+  'cryptography.hazmat.primitives.kdf.kbkdf',
+  'cryptography.hazmat.primitives.kdf.pbkdf2',
+  'cryptography.hazmat.primitives.kdf.scrypt',
+  'cryptography.hazmat.primitives.kdf.x963kdf',
+  'cryptography.hazmat.primitives.keywrap',
+  'cryptography.hazmat.primitives.padding',
+  'cryptography.hazmat.primitives.poly1305',
+  'cryptography.hazmat.primitives.serialization',
+  'cryptography.hazmat.primitives.serialization.base',
+  'cryptography.hazmat.primitives.serialization.pkcs12',
+  'cryptography.hazmat.primitives.serialization.pkcs7',
+  'cryptography.hazmat.primitives.serialization.ssh',
+  'cryptography.hazmat.primitives.twofactor',
+  'cryptography.hazmat.primitives.twofactor.hotp',
+  'cryptography.hazmat.primitives.twofactor.totp',
+  'cryptography.utils',
+  'cryptography.x509',
+  'cryptography.x509.base',
+  'cryptography.x509.certificate_transparency',
+  'cryptography.x509.extensions',
+  'cryptography.x509.general_name',
+  'cryptography.x509.name',
+  'cryptography.x509.ocsp',
+  'cryptography.x509.oid',
+  'cryptography.x509.verification'],
  [('c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\__pyinstaller',
    0),
@@ -29,6 +119,10 @@
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\uiautomatorv2-usb-threads\\bot\\bot.py',
    'DATA'),
+  ('license.key',
+   'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\uiautomatorv2-usb-threads\\license.key',
+   'DATA'),
   ('media\\fotos\\1.jpg',
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\uiautomatorv2-usb-threads\\media\\fotos\\1.jpg',
@@ -36,6 +130,10 @@
   ('media\\fotos\\2.jpg',
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\uiautomatorv2-usb-threads\\media\\fotos\\2.jpg',
+   'DATA'),
+  ('public_key.pem',
+   'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\uiautomatorv2-usb-threads\\public_key.pem',
    'DATA'),
   ('static\\styles.css',
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -1561,85 +1659,201 @@
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py',
    'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stringprep.py',
-   'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_py_abc.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\tracemalloc.py',
-   'PYMODULE'),
-  ('app',
-   'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\uiautomatorv2-usb-threads\\app.py',
-   'PYMODULE'),
-  ('platform',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\platform.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.padding',
+  ('cryptography.x509.verification',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\verification.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.rsa',
+  ('cryptography.x509.oid',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\oid.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.utils',
+  ('cryptography.x509.ocsp',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\ocsp.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives._serialization',
+  ('cryptography.x509.name',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\name.py',
+   'PYMODULE'),
+  ('cryptography.x509.general_name',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\general_name.py',
+   'PYMODULE'),
+  ('cryptography.x509.extensions',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\extensions.py',
+   'PYMODULE'),
+  ('cryptography.x509.certificate_transparency',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\certificate_transparency.py',
+   'PYMODULE'),
+  ('cryptography.x509.base',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\base.py',
+   'PYMODULE'),
+  ('cryptography.x509',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\__init__.py',
    'PYMODULE'),
   ('cryptography.utils',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\utils.py',
    'PYMODULE'),
-  ('cryptography',
+  ('cryptography.hazmat.primitives.twofactor.totp',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\__init__.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\totp.py',
    'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl.binding',
+  ('cryptography.hazmat.primitives.twofactor.hotp',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\hotp.py',
    'PYMODULE'),
-  ('cryptography.exceptions',
+  ('cryptography.hazmat.primitives.twofactor',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\exceptions.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\__init__.py',
    'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl._conditional',
+  ('cryptography.hazmat.primitives.serialization.ssh',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\ssh.py',
    'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl',
+  ('cryptography.hazmat.primitives.serialization.pkcs7',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs7.py',
    'PYMODULE'),
-  ('cryptography.hazmat.bindings',
+  ('cryptography.hazmat.primitives.serialization.pkcs12',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\__init__.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs12.py',
    'PYMODULE'),
-  ('cryptography.hazmat',
+  ('cryptography.hazmat.primitives.serialization.base',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\__init__.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\base.py',
    'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.backend',
+  ('cryptography.hazmat.primitives.poly1305',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\poly1305.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.padding',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\padding.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.keywrap',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\keywrap.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.x963kdf',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\x963kdf.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.scrypt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\scrypt.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.pbkdf2',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\pbkdf2.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.kbkdf',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\kbkdf.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.hkdf',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\hkdf.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.concatkdf',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\concatkdf.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.argon2',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\argon2.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.hmac',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\hmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.constant_time',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.cmac',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\cmac.py',
    'PYMODULE'),
   ('cryptography.hazmat.primitives.ciphers.modes',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\modes.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives._cipheralgorithm',
+  ('cryptography.hazmat.primitives.ciphers.base',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_cipheralgorithm.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\base.py',
    'PYMODULE'),
   ('cryptography.hazmat.primitives.ciphers.algorithms',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\algorithms.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.aead',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\aead.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x448',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x25519',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.utils',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.types',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\types.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.rsa',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed448',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed25519',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ec',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dsa',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dh',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._serialization',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._cipheralgorithm',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_cipheralgorithm.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._asymmetric',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
    'PYMODULE'),
   ('cryptography.hazmat.decrepit.ciphers.algorithms',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -1653,21 +1867,25 @@
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\__init__.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.ciphers',
+  ('cryptography.hazmat.bindings.openssl.binding',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.ciphers.base',
+  ('cryptography.hazmat.bindings.openssl._conditional',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\base.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ec',
+  ('cryptography.hazmat.bindings.openssl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
    'PYMODULE'),
-  ('cryptography.hazmat._oid',
+  ('cryptography.hazmat.bindings',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\_oid.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.backend',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
    'PYMODULE'),
   ('cryptography.hazmat.backends.openssl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -1677,53 +1895,725 @@
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\__init__.py',
    'PYMODULE'),
+  ('cryptography.hazmat._oid',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\_oid.py',
+   'PYMODULE'),
+  ('cryptography.hazmat',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.fernet',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\fernet.py',
+   'PYMODULE'),
+  ('cryptography.exceptions',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\exceptions.py',
+   'PYMODULE'),
   ('cryptography.__about__',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\__about__.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives._asymmetric',
+  ('cryptography',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\__init__.py',
+   'PYMODULE'),
+  ('uiautomator2.xpath',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\xpath.py',
+   'PYMODULE'),
+  ('lxml',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\__init__.py',
+   'PYMODULE'),
+  ('lxml.usedoctest',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\usedoctest.py',
+   'PYMODULE'),
+  ('lxml.pyclasslookup',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\pyclasslookup.py',
+   'PYMODULE'),
+  ('lxml.isoschematron',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\__init__.py',
+   'PYMODULE'),
+  ('lxml.includes.libxslt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\includes\\libxslt\\__init__.py',
+   'PYMODULE'),
+  ('lxml.includes.libxml',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\includes\\libxml\\__init__.py',
+   'PYMODULE'),
+  ('lxml.includes.libexslt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\includes\\libexslt\\__init__.py',
+   'PYMODULE'),
+  ('lxml.includes.extlibs',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\includes\\extlibs\\__init__.py',
+   'PYMODULE'),
+  ('lxml.includes',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\includes\\__init__.py',
+   'PYMODULE'),
+  ('lxml.html.usedoctest',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\usedoctest.py',
+   'PYMODULE'),
+  ('lxml.html.soupparser',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\soupparser.py',
+   'PYMODULE'),
+  ('lxml.html.html5parser',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\html5parser.py',
+   'PYMODULE'),
+  ('lxml.html.formfill',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\formfill.py',
+   'PYMODULE'),
+  ('lxml.html.defs',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\defs.py',
+   'PYMODULE'),
+  ('lxml.html.clean',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\clean.py',
+   'PYMODULE'),
+  ('lxml.html.builder',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\builder.py',
+   'PYMODULE'),
+  ('lxml.html._setmixin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\_setmixin.py',
+   'PYMODULE'),
+  ('lxml.html._html5builder',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\_html5builder.py',
+   'PYMODULE'),
+  ('lxml.html._diffcommand',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\_diffcommand.py',
+   'PYMODULE'),
+  ('optparse',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\optparse.py',
+   'PYMODULE'),
+  ('lxml.html.ElementSoup',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\ElementSoup.py',
+   'PYMODULE'),
+  ('lxml.html',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\__init__.py',
+   'PYMODULE'),
+  ('lxml.doctestcompare',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\doctestcompare.py',
+   'PYMODULE'),
+  ('doctest',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\doctest.py',
+   'PYMODULE'),
+  ('pdb',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\pdb.py',
+   'PYMODULE'),
+  ('bdb',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\bdb.py',
+   'PYMODULE'),
+  ('cmd',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\cmd.py',
+   'PYMODULE'),
+  ('lxml.cssselect',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\cssselect.py',
+   'PYMODULE'),
+  ('lxml.ElementInclude',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\ElementInclude.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageTk',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.QoiImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\QoiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FitsImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\FitsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.AvifImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\AvifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('colorsys',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\colorsys.py',
+   'PYMODULE'),
+  ('PIL.ImageCms',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageCms.py',
+   'PYMODULE'),
+  ('PIL.ImageWin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageWin.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageOps',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageOps.py',
+   'PYMODULE'),
+  ('PIL.ImageMath',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageMath.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._typing',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_typing.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('xml.etree.ElementTree',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\ElementTree.py',
+   'PYMODULE'),
+  ('xml.etree.cElementTree',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\cElementTree.py',
+   'PYMODULE'),
+  ('xml.etree.ElementInclude',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\ElementInclude.py',
+   'PYMODULE'),
+  ('xml.etree.ElementPath',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\ElementPath.py',
+   'PYMODULE'),
+  ('xml.etree',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\__init__.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL._deprecate',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_deprecate.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL.ExifTags',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ExifTags.py',
+   'PYMODULE'),
+  ('PIL',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL.ImageDraw2',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageDraw2.py',
+   'PYMODULE'),
+  ('PIL.ImagePath',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImagePath.py',
+   'PYMODULE'),
+  ('PIL.ImageFont',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageFont.py',
+   'PYMODULE'),
+  ('PIL.ImageDraw',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\ImageDraw.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
+  ('uiautomator2.watcher',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\watcher.py',
+   'PYMODULE'),
+  ('uiautomator2.version',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\version.py',
+   'PYMODULE'),
+  ('uiautomator2.utils',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\utils.py',
+   'PYMODULE'),
+  ('uiautomator2.swipe',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\swipe.py',
+   'PYMODULE'),
+  ('uiautomator2.settings',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\settings.py',
+   'PYMODULE'),
+  ('uiautomator2.screenrecord',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\screenrecord.py',
+   'PYMODULE'),
+  ('websocket',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\__init__.py',
+   'PYMODULE'),
+  ('websocket._socket',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_socket.py',
+   'PYMODULE'),
+  ('websocket._utils',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_utils.py',
+   'PYMODULE'),
+  ('websocket._ssl_compat',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_ssl_compat.py',
+   'PYMODULE'),
+  ('websocket._exceptions',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_exceptions.py',
+   'PYMODULE'),
+  ('websocket._core',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_core.py',
+   'PYMODULE'),
+  ('websocket._http',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_http.py',
+   'PYMODULE'),
+  ('websocket._url',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_url.py',
+   'PYMODULE'),
+  ('websocket._handshake',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_handshake.py',
+   'PYMODULE'),
+  ('websocket._cookiejar',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_cookiejar.py',
+   'PYMODULE'),
+  ('http.cookies',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\http\\cookies.py',
+   'PYMODULE'),
+  ('websocket._app',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_app.py',
+   'PYMODULE'),
+  ('websocket._logging',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_logging.py',
+   'PYMODULE'),
+  ('websocket._abnf',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\websocket\\_abnf.py',
+   'PYMODULE'),
+  ('uiautomator2.image',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\image.py',
+   'PYMODULE'),
+  ('uiautomator2.ext.perf',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\perf\\__init__.py',
+   'PYMODULE'),
+  ('uiautomator2.ext.htmlreport',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\htmlreport\\__init__.py',
+   'PYMODULE'),
+  ('uiautomator2.ext',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\__init__.py',
+   'PYMODULE'),
+  ('uiautomator2.exceptions',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\exceptions.py',
+   'PYMODULE'),
+  ('uiautomator2.core',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\core.py',
+   'PYMODULE'),
+  ('adbutils',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\__init__.py',
+   'PYMODULE'),
+  ('adbutils.binaries',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\binaries\\__init__.py',
+   'PYMODULE'),
+  ('adbutils.errors',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\errors.py',
+   'PYMODULE'),
+  ('adbutils._version',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_version.py',
+   'PYMODULE'),
+  ('adbutils._utils',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_utils.py',
+   'PYMODULE'),
+  ('adbutils._proto',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_proto.py',
+   'PYMODULE'),
+  ('adbutils._device',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_device.py',
+   'PYMODULE'),
+  ('adbutils.sync',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\sync.py',
+   'PYMODULE'),
+  ('adbutils.shell',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\shell.py',
+   'PYMODULE'),
+  ('adbutils._interfaces',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_interfaces.py',
+   'PYMODULE'),
+  ('retry',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\retry\\__init__.py',
+   'PYMODULE'),
+  ('retry.api',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\retry\\api.py',
+   'PYMODULE'),
+  ('retry.compat',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\retry\\compat.py',
+   'PYMODULE'),
+  ('decorator',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\decorator.py',
+   'PYMODULE'),
+  ('adbutils.screenshot',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\screenshot.py',
+   'PYMODULE'),
+  ('adbutils.screenrecord',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\screenrecord.py',
+   'PYMODULE'),
+  ('adbutils.install',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\install.py',
+   'PYMODULE'),
+  ('adbutils._device_base',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_device_base.py',
+   'PYMODULE'),
+  ('adbutils._deprecated',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_deprecated.py',
+   'PYMODULE'),
+  ('adbutils._adb',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\_adb.py',
+   'PYMODULE'),
+  ('deprecation',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\deprecation.py',
+   'PYMODULE'),
+  ('uiautomator2.base',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\base.py',
+   'PYMODULE'),
+  ('uiautomator2.abstract',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\abstract.py',
+   'PYMODULE'),
+  ('uiautomator2._selector',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\_selector.py',
+   'PYMODULE'),
+  ('uiautomator2._proto',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\_proto.py',
+   'PYMODULE'),
+  ('uiautomator2._input',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\_input.py',
+   'PYMODULE'),
+  ('uiautomator2.__main__',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\__main__.py',
+   'PYMODULE'),
+  ('uiautomator2',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\uiautomator2\\__init__.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_py_abc.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stringprep.py',
+   'PYMODULE'),
+  ('app',
+   'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\uiautomatorv2-usb-threads\\app.py',
+   'PYMODULE'),
+  ('platform',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\platform.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.padding',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
    'PYMODULE'),
   ('cryptography.hazmat.primitives.asymmetric',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.dh',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.x25519',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.x448',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ed25519',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ed448',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.dsa',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
-   'PYMODULE'),
   ('cryptography.hazmat.primitives.serialization',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.serialization.ssh',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\ssh.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.serialization.base',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\base.py',
    'PYMODULE'),
   ('cryptography.hazmat.primitives.hashes',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -1732,10 +2622,6 @@
   ('cryptography.hazmat.primitives',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.constant_time',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
    'PYMODULE'),
   ('datetime',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\datetime.py',
@@ -1767,9 +2653,6 @@
   ('requests.compat',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\requests\\compat.py',
-   'PYMODULE'),
-  ('http.cookies',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\http\\cookies.py',
    'PYMODULE'),
   ('requests.models',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -1970,42 +2853,6 @@
   ('urllib3.contrib.pyopenssl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\urllib3\\contrib\\pyopenssl.py',
-   'PYMODULE'),
-  ('cryptography.x509.extensions',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\extensions.py',
-   'PYMODULE'),
-  ('cryptography.x509.oid',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\oid.py',
-   'PYMODULE'),
-  ('cryptography.x509.name',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\name.py',
-   'PYMODULE'),
-  ('cryptography.x509.general_name',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\general_name.py',
-   'PYMODULE'),
-  ('cryptography.x509.certificate_transparency',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\certificate_transparency.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.types',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\types.py',
-   'PYMODULE'),
-  ('cryptography.x509',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.x509.base',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\base.py',
-   'PYMODULE'),
-  ('cryptography.x509.verification',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\x509\\verification.py',
    'PYMODULE'),
   ('urllib3.contrib',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -2313,21 +3160,6 @@
   ('clr_loader.util.coreclr_errors',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\clr_loader\\util\\coreclr_errors.py',
-   'PYMODULE'),
-  ('xml.etree.ElementTree',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\ElementTree.py',
-   'PYMODULE'),
-  ('xml.etree.cElementTree',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\cElementTree.py',
-   'PYMODULE'),
-  ('xml.etree.ElementInclude',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\ElementInclude.py',
-   'PYMODULE'),
-  ('xml.etree.ElementPath',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\ElementPath.py',
-   'PYMODULE'),
-  ('xml.etree',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\__init__.py',
    'PYMODULE'),
   ('clr_loader.util.clr_error',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -2923,17 +3755,37 @@
   ('subprocess',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py',
    'PYMODULE')],
- [('webview\\lib\\runtimes\\win-x86\\native\\WebView2Loader.dll',
+ [('adbutils\\binaries\\AdbWinUsbApi.dll',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\runtimes\\win-x86\\native\\WebView2Loader.dll',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\binaries\\AdbWinUsbApi.dll',
+   'BINARY'),
+  ('adbutils\\binaries\\adb.exe',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\binaries\\adb.exe',
+   'BINARY'),
+  ('adbutils\\binaries\\AdbWinApi.dll',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils\\binaries\\AdbWinApi.dll',
+   'BINARY'),
+  ('webview\\lib\\Microsoft.Web.WebView2.WinForms.dll',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\Microsoft.Web.WebView2.WinForms.dll',
+   'BINARY'),
+  ('webview\\lib\\Microsoft.Web.WebView2.Core.dll',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\Microsoft.Web.WebView2.Core.dll',
    'BINARY'),
   ('webview\\lib\\WebBrowserInterop.x64.dll',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\WebBrowserInterop.x64.dll',
    'BINARY'),
-  ('webview\\lib\\Microsoft.Web.WebView2.Core.dll',
+  ('webview\\lib\\runtimes\\win-x86\\native\\WebView2Loader.dll',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\Microsoft.Web.WebView2.Core.dll',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\runtimes\\win-x86\\native\\WebView2Loader.dll',
+   'BINARY'),
+  ('webview\\lib\\runtimes\\win-arm64\\native\\WebView2Loader.dll',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\runtimes\\win-arm64\\native\\WebView2Loader.dll',
    'BINARY'),
   ('webview\\lib\\WebBrowserInterop.x86.dll',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -2942,14 +3794,6 @@
   ('webview\\lib\\runtimes\\win-x64\\native\\WebView2Loader.dll',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\runtimes\\win-x64\\native\\WebView2Loader.dll',
-   'BINARY'),
-  ('webview\\lib\\Microsoft.Web.WebView2.WinForms.dll',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\Microsoft.Web.WebView2.WinForms.dll',
-   'BINARY'),
-  ('webview\\lib\\runtimes\\win-arm64\\native\\WebView2Loader.dll',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\runtimes\\win-arm64\\native\\WebView2Loader.dll',
    'BINARY'),
   ('python313.dll',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll',
@@ -3008,16 +3852,67 @@
   ('_asyncio.pyd',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_asyncio.pyd',
    'EXTENSION'),
-  ('_wmi.pyd',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd',
+  ('cryptography\\hazmat\\bindings\\_rust.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
    'EXTENSION'),
   ('_cffi_backend.cp313-win_amd64.pyd',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\_cffi_backend.cp313-win_amd64.pyd',
    'EXTENSION'),
-  ('cryptography\\hazmat\\bindings\\_rust.pyd',
+  ('lxml\\etree.cp313-win_amd64.pyd',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\etree.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('lxml\\_elementpath.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\_elementpath.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('lxml\\sax.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\sax.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('lxml\\objectify.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\objectify.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('lxml\\html\\diff.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\html\\diff.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('lxml\\builder.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\builder.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_webp.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_webp.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingtk.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_imagingtk.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingcms.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_imagingcms.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingmath.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_imagingmath.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('PIL\\_imaging.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_imaging.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingft.cp313-win_amd64.pyd',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\PIL\\_imagingft.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('_wmi.pyd',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd',
    'EXTENSION'),
   ('charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -3026,9 +3921,6 @@
   ('charset_normalizer\\md.cp313-win_amd64.pyd',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\charset_normalizer\\md.cp313-win_amd64.pyd',
-   'EXTENSION'),
-  ('_elementtree.pyd',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_elementtree.pyd',
    'EXTENSION'),
   ('markupsafe\\_speedups.cp313-win_amd64.pyd',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -3040,20 +3932,20 @@
   ('VCRUNTIME140.dll',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
    'BINARY'),
-  ('libssl-3.dll',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll',
-   'BINARY'),
   ('libcrypto-3.dll',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('libssl-3.dll',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll',
    'BINARY'),
   ('libffi-8.dll',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll',
    'BINARY'),
-  ('VCRUNTIME140_1.dll',
-   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
-   'BINARY'),
   ('python3.dll',
    'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\rishi\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
    'BINARY')],
  [],
  [],
@@ -3065,6 +3957,10 @@
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\uiautomatorv2-usb-threads\\bot\\bot.py',
    'DATA'),
+  ('license.key',
+   'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\uiautomatorv2-usb-threads\\license.key',
+   'DATA'),
   ('media\\fotos\\1.jpg',
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\uiautomatorv2-usb-threads\\media\\fotos\\1.jpg',
@@ -3072,6 +3968,10 @@
   ('media\\fotos\\2.jpg',
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\uiautomatorv2-usb-threads\\media\\fotos\\2.jpg',
+   'DATA'),
+  ('public_key.pem',
+   'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\uiautomatorv2-usb-threads\\public_key.pem',
    'DATA'),
   ('static\\styles.css',
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -3081,25 +3981,9 @@
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\uiautomatorv2-usb-threads\\templates\\index.html',
    'DATA'),
-  ('cryptography-45.0.3.dist-info\\licenses\\LICENSE.APACHE',
+  ('cryptography-45.0.3.dist-info\\WHEEL',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\licenses\\LICENSE.APACHE',
-   'DATA'),
-  ('cryptography-45.0.3.dist-info\\licenses\\LICENSE.BSD',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\licenses\\LICENSE.BSD',
-   'DATA'),
-  ('cryptography-45.0.3.dist-info\\INSTALLER',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\INSTALLER',
-   'DATA'),
-  ('cryptography-45.0.3.dist-info\\licenses\\LICENSE',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\licenses\\LICENSE',
-   'DATA'),
-  ('cryptography-45.0.3.dist-info\\RECORD',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\RECORD',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\WHEEL',
    'DATA'),
   ('cryptography-45.0.3.dist-info\\METADATA',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -3109,50 +3993,73 @@
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\REQUESTED',
    'DATA'),
-  ('cryptography-45.0.3.dist-info\\WHEEL',
+  ('cryptography-45.0.3.dist-info\\licenses\\LICENSE.APACHE',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\WHEEL',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\licenses\\LICENSE.APACHE',
    'DATA'),
-  ('certifi\\cacert.pem',
+  ('cryptography-45.0.3.dist-info\\licenses\\LICENSE',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\certifi\\cacert.pem',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\licenses\\LICENSE',
    'DATA'),
-  ('certifi\\py.typed',
+  ('cryptography-45.0.3.dist-info\\RECORD',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\certifi\\py.typed',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\RECORD',
    'DATA'),
-  ('webview\\lib\\pywebview-android.jar',
+  ('cryptography-45.0.3.dist-info\\INSTALLER',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\pywebview-android.jar',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\INSTALLER',
    'DATA'),
-  ('webview\\js\\customize.js',
+  ('cryptography-45.0.3.dist-info\\licenses\\LICENSE.BSD',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\customize.js',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\cryptography-45.0.3.dist-info\\licenses\\LICENSE.BSD',
    'DATA'),
-  ('webview\\js\\api.js',
+  ('lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_schematron_message.xsl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\api.js',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_schematron_message.xsl',
    'DATA'),
-  ('webview\\js\\lib\\polyfill.js',
+  ('lxml\\isoschematron\\resources\\xsl\\RNG2Schtrn.xsl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\lib\\polyfill.js',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\RNG2Schtrn.xsl',
    'DATA'),
-  ('webview\\js\\lib\\dom_json.js',
+  ('lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_svrl_for_xslt1.xsl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\lib\\dom_json.js',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_svrl_for_xslt1.xsl',
    'DATA'),
-  ('webview\\js\\finish.js',
+  ('lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\readme.txt',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\finish.js',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\readme.txt',
    'DATA'),
-  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
+  ('lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_schematron_skeleton_for_xslt1.xsl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
-   'ipsum.txt',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_schematron_skeleton_for_xslt1.xsl',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+  ('lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_dsdl_include.xsl',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_dsdl_include.xsl',
+   'DATA'),
+  ('lxml\\isoschematron\\resources\\xsl\\XSD2Schtrn.xsl',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\XSD2Schtrn.xsl',
+   'DATA'),
+  ('lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_abstract_expand.xsl',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\xsl\\iso-schematron-xslt1\\iso_abstract_expand.xsl',
+   'DATA'),
+  ('lxml\\isoschematron\\resources\\rng\\iso-schematron.rng',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\resources\\rng\\iso-schematron.rng',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -3162,105 +4069,114 @@
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'ipsum.txt',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+  ('certifi\\cacert.pem',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('certifi\\py.typed',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\certifi\\py.typed',
+   'DATA'),
+  ('webview\\js\\lib\\polyfill.js',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\lib\\polyfill.js',
+   'DATA'),
+  ('webview\\js\\customize.js',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\customize.js',
+   'DATA'),
+  ('webview\\js\\finish.js',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\finish.js',
+   'DATA'),
+  ('webview\\lib\\pywebview-android.jar',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\lib\\pywebview-android.jar',
+   'DATA'),
+  ('webview\\js\\lib\\dom_json.js',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\lib\\dom_json.js',
+   'DATA'),
+  ('webview\\js\\api.js',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\webview\\js\\api.js',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\WHEEL',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\WHEEL',
    'DATA'),
   ('click-8.2.1.dist-info\\WHEEL',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\WHEEL',
    'DATA'),
-  ('flask-3.1.1.dist-info\\METADATA',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\METADATA',
-   'DATA'),
-  ('flask-3.1.1.dist-info\\REQUESTED',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\REQUESTED',
-   'DATA'),
-  ('werkzeug-3.1.3.dist-info\\RECORD',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\RECORD',
-   'DATA'),
-  ('MarkupSafe-3.0.2.dist-info\\top_level.txt',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\top_level.txt',
-   'DATA'),
-  ('flask-3.1.1.dist-info\\RECORD',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\RECORD',
-   'DATA'),
-  ('werkzeug-3.1.3.dist-info\\INSTALLER',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\INSTALLER',
-   'DATA'),
-  ('MarkupSafe-3.0.2.dist-info\\METADATA',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\METADATA',
-   'DATA'),
-  ('flask-3.1.1.dist-info\\INSTALLER',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\INSTALLER',
-   'DATA'),
-  ('click-8.2.1.dist-info\\INSTALLER',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\INSTALLER',
-   'DATA'),
   ('MarkupSafe-3.0.2.dist-info\\RECORD',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\RECORD',
-   'DATA'),
-  ('flask-3.1.1.dist-info\\entry_points.txt',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\entry_points.txt',
-   'DATA'),
-  ('click-8.2.1.dist-info\\METADATA',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\METADATA',
-   'DATA'),
-  ('werkzeug-3.1.3.dist-info\\METADATA',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\METADATA',
-   'DATA'),
-  ('itsdangerous-2.2.0.dist-info\\METADATA',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\METADATA',
-   'DATA'),
-  ('MarkupSafe-3.0.2.dist-info\\INSTALLER',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\INSTALLER',
-   'DATA'),
-  ('MarkupSafe-3.0.2.dist-info\\LICENSE.txt',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\LICENSE.txt',
-   'DATA'),
-  ('itsdangerous-2.2.0.dist-info\\INSTALLER',
-   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\INSTALLER',
    'DATA'),
   ('itsdangerous-2.2.0.dist-info\\RECORD',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\RECORD',
    'DATA'),
-  ('MarkupSafe-3.0.2.dist-info\\WHEEL',
+  ('werkzeug-3.1.3.dist-info\\METADATA',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\WHEEL',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\METADATA',
+   'DATA'),
+  ('werkzeug-3.1.3.dist-info\\WHEEL',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\WHEEL',
+   'DATA'),
+  ('adbutils-2.9.2.dist-info\\LICENSE',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\LICENSE',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\INSTALLER',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('MarkupSafe-3.0.2.dist-info\\METADATA',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\METADATA',
+   'DATA'),
+  ('flask-3.1.1.dist-info\\REQUESTED',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('click-8.2.1.dist-info\\INSTALLER',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\INSTALLER',
    'DATA'),
   ('itsdangerous-2.2.0.dist-info\\LICENSE.txt',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('adbutils-2.9.2.dist-info\\RECORD',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\RECORD',
+   'DATA'),
+  ('adbutils-2.9.2.dist-info\\top_level.txt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\top_level.txt',
+   'DATA'),
+  ('adbutils-2.9.2.dist-info\\METADATA',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\METADATA',
+   'DATA'),
+  ('adbutils-2.9.2.dist-info\\WHEEL',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\WHEEL',
    'DATA'),
   ('flask-3.1.1.dist-info\\licenses\\LICENSE.txt',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
@@ -3270,25 +4186,77 @@
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\WHEEL',
    'DATA'),
-  ('werkzeug-3.1.3.dist-info\\WHEEL',
+  ('adbutils-2.9.2.dist-info\\INSTALLER',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\WHEEL',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\INSTALLER',
    'DATA'),
-  ('itsdangerous-2.2.0.dist-info\\WHEEL',
+  ('click-8.2.1.dist-info\\RECORD',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\WHEEL',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\RECORD',
    'DATA'),
-  ('werkzeug-3.1.3.dist-info\\LICENSE.txt',
+  ('flask-3.1.1.dist-info\\INSTALLER',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\LICENSE.txt',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('werkzeug-3.1.3.dist-info\\INSTALLER',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('flask-3.1.1.dist-info\\RECORD',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\RECORD',
+   'DATA'),
+  ('click-8.2.1.dist-info\\METADATA',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\METADATA',
+   'DATA'),
+  ('flask-3.1.1.dist-info\\METADATA',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\METADATA',
    'DATA'),
   ('click-8.2.1.dist-info\\licenses\\LICENSE.txt',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
    'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\licenses\\LICENSE.txt',
    'DATA'),
-  ('click-8.2.1.dist-info\\RECORD',
+  ('werkzeug-3.1.3.dist-info\\LICENSE.txt',
    'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
-   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\click-8.2.1.dist-info\\RECORD',
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('adbutils-2.9.2.dist-info\\AUTHORS',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\AUTHORS',
+   'DATA'),
+  ('werkzeug-3.1.3.dist-info\\RECORD',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\werkzeug-3.1.3.dist-info\\RECORD',
+   'DATA'),
+  ('MarkupSafe-3.0.2.dist-info\\top_level.txt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\top_level.txt',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\METADATA',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\METADATA',
+   'DATA'),
+  ('adbutils-2.9.2.dist-info\\pbr.json',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\adbutils-2.9.2.dist-info\\pbr.json',
+   'DATA'),
+  ('flask-3.1.1.dist-info\\entry_points.txt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\flask-3.1.1.dist-info\\entry_points.txt',
+   'DATA'),
+  ('MarkupSafe-3.0.2.dist-info\\LICENSE.txt',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('MarkupSafe-3.0.2.dist-info\\INSTALLER',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\INSTALLER',
+   'DATA'),
+  ('MarkupSafe-3.0.2.dist-info\\WHEEL',
+   'c:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '
+   'SPAMMER\\threads-app\\.venv\\Lib\\site-packages\\MarkupSafe-3.0.2.dist-info\\WHEEL',
    'DATA'),
   ('base_library.zip',
    'C:\\Users\\rishi\\Desktop\\PROGRAMAS CUSTOM\\BOT '

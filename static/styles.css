@@ -1,3 +1,24 @@
+/* ————————————————————— */
+/* ZONA DRAG GLOBAL        */
+/* (todo lo que no sea explícitamente no-drag) */
+/* ————————————————————— */
+html, body, .navbar {
+  -webkit-app-region: drag;
+}
+
+/* ————————————————————— */
+/* ZONA NO-DRAG: todos los botones, inputs, enlaces clickeables, etc. */
+/* ————————————————————— */
+button,
+input,
+select,
+a.btn,
+.btn-close,
+.form-check-input {
+  -webkit-app-region: no-drag;
+}
+
+
 /* luz suave por defecto */
 :root {
   --bg-color:        #f2f2f2;    /* menos “blanco puro” */
@@ -30,28 +51,43 @@ html, body {
 }
 
 /* Tu navbar será el área que arrastras */
+
 .navbar {
+  height: 45px;
+  background-color: var(--navbar-bg) !important;
+  display: flex;
+  align-items: center;
+}
+
+/* -------------------------------------------------- */
+/* 1) ZONA DRAG: navbar, su container y la marca       */
+/* -------------------------------------------------- */
+.navbar,
+.navbar .container,
+.navbar-brand {
   -webkit-app-region: drag;
 }
 
-/* Todos los botones y enlaces dentro no deben arrastrar */
+/* -------------------------------------------------- */
+/* 2) ZONA NO-DRAG: SOLO los botones que quieres usar  */
+/* -------------------------------------------------- */
 .navbar button,
-.navbar a,
-.navbar input {
+.navbar input,
+.btn-close {
   -webkit-app-region: no-drag;
 }
 
 
+.no-drag {
+  -webkit-app-region: no-drag;
+}
 
 body {
   background-color: var(--bg-color);
   color:            var(--text-color);
   font-family:      "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin:           0;
-}
-
-.navbar {
-  background-color: var(--navbar-bg) !important;
+  padding-top: 0 !important;
 }
 
 .navbar-brand {

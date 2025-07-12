@@ -326,6 +326,11 @@ class API:
             return {"status": "ok", "destino": destino}
         except Exception as e:
             return {"status": "error", "message": str(e)}
+        
+    def cerrar(self):
+        import webview
+        webview.windows[0].destroy()
+
 
 @app.route("/log/")
 @app.route("/log/<udid>")

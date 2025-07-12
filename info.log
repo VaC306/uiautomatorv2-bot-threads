@@ -1,39 +1,18 @@
 
 
---- EJECUCIÓN 2025-06-28T12:53:12.477581 ---
+--- EJECUCIÓN 2025-06-28T16:05:29.998585 ---
  * Serving Flask app 'app'
  * Debug mode: off
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on http://127.0.0.1:5000
 Press CTRL+C to quit
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /static/styles.css HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /status HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /favicon.ico HTTP/1.1" 404 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /last_action/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /countdown/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /last_action/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /countdown/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /last_action/c99f1ab6 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:13] "GET /countdown/c99f1ab6 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:15] "GET /status HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:15] "GET /last_action/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:15] "GET /countdown/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:15] "GET /last_action/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:15] "GET /countdown/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:15] "GET /last_action/c99f1ab6 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:15] "GET /countdown/c99f1ab6 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:17] "GET /status HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:17] "GET /last_action/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:17] "GET /countdown/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:17] "GET /last_action/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:17] "GET /countdown/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:17] "GET /last_action/c99f1ab6 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:17] "GET /countdown/c99f1ab6 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:19] "GET /status HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:19] "GET /last_action/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:19] "GET /countdown/publicaciones HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:19] "GET /last_action/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:19] "GET /countdown/ZY22JXL29K HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:19] "GET /last_action/c99f1ab6 HTTP/1.1" 200 -
-127.0.0.1 - - [28/Jun/2025 12:53:19] "GET /countdown/c99f1ab6 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /static/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /status HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /last_action/publicaciones HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /countdown/publicaciones HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /last_action/ZY22JXL29K HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /countdown/ZY22JXL29K HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /last_action/c99f1ab6 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Jun/2025 16:05:30] "GET /countdown/c99f1ab6 HTTP/1.1" 200 -
